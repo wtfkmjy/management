@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.management.mapper.CustomerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.Customer">
+        <id column="customerId" property="customerId" />
+        <result column="customerName" property="customerName" />
+        <result column="customerEmail" property="customerEmail" />
+        <result column="customerGender" property="customerGender" />
+        <result column="customerAddress" property="customerAddress" />
+        <result column="customerPhone" property="customerPhone" />
+        <result column="customerJob" property="customerJob" />
+        <result column="customerJointime" property="customerJointime" />
+        <result column="chargeStaff" property="chargeStaff" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        customerId, customerName, customerEmail, customerGender, customerAddress, customerPhone, customerJob, customerJointime, chargeStaff
+    </sql>
+
+</mapper>

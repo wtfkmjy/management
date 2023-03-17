@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.management.mapper.StaffMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.Staff">
+        <id column="staffId" property="staffId" />
+        <result column="staffName" property="staffName" />
+        <result column="staffEmail" property="staffEmail" />
+        <result column="staffGender" property="staffGender" />
+        <result column="staffAddress" property="staffAddress" />
+        <result column="staffJob" property="staffJob" />
+        <result column="staffPhone" property="staffPhone" />
+        <result column="staffAccount" property="staffAccount" />
+        <result column="staffPassword" property="staffPassword" />
+        <result column="departmentId" property="departmentId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        staffId, staffName, staffEmail, staffGender, staffAddress, staffJob, staffPhone, staffAccount, staffPassword, departmentId
+    </sql>
+
+</mapper>
