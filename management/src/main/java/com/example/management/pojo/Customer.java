@@ -43,5 +43,79 @@ public class Customer implements Serializable {
     @TableField("chargeStaff")
     private String chargeStaff;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
+    public Integer getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Integer customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getCustomerEmail() {
+        return customerEmail;
+    }
+
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
+    }
+
+    public String getCustomerGender() {
+        return customerGender;
+    }
+
+    public void setCustomerGender(String customerGender) {
+        this.customerGender = customerGender;
+    }
+
+    public String getCustomerAddress() {
+        return customerAddress;
+    }
+
+    public void setCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
+    }
+
+    public String getCustomerPhone() {
+        return customerPhone;
+    }
+
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
+    }
+
+    public String getCustomerJob() {
+        return customerJob;
+    }
+
+    public void setCustomerJob(String customerJob) {
+        this.customerJob = customerJob;
+    }
+
+    public String getCustomerJointime() {
+        return customerJointime;
+    }
+
+    public void setCustomerJointime(String customerJointime) {
+        this.customerJointime = customerJointime;
+    }
+
+    public String getChargeStaff() {
+        return chargeStaff;
+    }
+
+    public void setChargeStaff(String chargeStaff) {
+        this.chargeStaff = chargeStaff;
+    }
 }
