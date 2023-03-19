@@ -13,4 +13,6 @@ public interface StaffService extends IService<Staff> {
     CommonResult selectByJob(Staff staff);
 
     CommonResult setAccount(Staff staff);
+
+    CommonResult updateStaff(Staff staff);
 }

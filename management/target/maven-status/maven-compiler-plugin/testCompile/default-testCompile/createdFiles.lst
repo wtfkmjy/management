@@ -1,3 +1,8 @@
+com\example\management\controller\RecordControllerTest.class
+com\example\management\mapper\MapperTest.class
 com\example\management\ManagementApplicationTests.class
 com\example\management\CodeGenerator.class
-com\example\management\mapper\MapperTest.class
+com\example\management\controller\CustomerControllerTest.class
+com\example\management\controller\ChatControllerTest.class
+com\example\management\controller\LoginControllerTest.class
+com\example\management\controller\StaffControllerTest.class

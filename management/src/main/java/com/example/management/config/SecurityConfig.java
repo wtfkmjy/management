@@ -3,6 +3,7 @@ package com.example.management.config;
 import com.example.management.filter.JwtAuthenticationTokenFilter;
 import com.example.management.handle.AccessDeniedHandlerImpl;
 import com.example.management.handle.AuthenticationEntryPointImpl;
+import com.example.management.handle.FailureHandle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -41,6 +42,9 @@ public class SecurityConfig {
     @Autowired
     private AuthenticationEntryPointImpl authenticationEntryPoint;
 
+    @Autowired
+    private FailureHandle failureHandle;
+
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
@@ -65,7 +69,11 @@ public class SecurityConfig {
                 .exceptionHandling()
                 .authenticationEntryPoint(authenticationEntryPoint)
                 .accessDeniedHandler(accessDeniedHandler)
-                .and().cors()
+                .and()
+                //.formLogin()
+                //.failureHandler(failureHandle)
+                //.and()
+                .cors()
                 .and().build();
     }
 }

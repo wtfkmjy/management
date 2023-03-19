@@ -35,7 +35,8 @@ public class StaffDetailsServiceImpl implements UserDetailsService {
         Staff staff = staffMapper.selectOne(queryWrapper);
         //如果没有查询到用户
         if (Objects.isNull(staff)){
-            throw new RuntimeException("用户名或者密码错误");
+            //throw new RuntimeException("用户名或者密码错误");
+            return null;
         }
 
 

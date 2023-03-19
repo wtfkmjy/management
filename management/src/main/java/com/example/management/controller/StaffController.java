@@ -38,5 +38,11 @@ public class StaffController {
     public CommonResult setAccount(Staff staff){
         return staffService.setAccount(staff);
     }
+
+    @PreAuthorize("hasAuthority('主管')")
+    @PostMapping
+    public CommonResult updateStaff(Staff staff){
+        return staffService.updateStaff(staff);
+    }
 }
 

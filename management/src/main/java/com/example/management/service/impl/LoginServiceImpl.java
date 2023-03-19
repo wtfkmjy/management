@@ -36,6 +36,9 @@ public class LoginServiceImpl implements LoginService {
             return CommonResult.error(400,"用户名不存在");
         }
         LoginStaff loginStaff = (LoginStaff)authenticate.getPrincipal();
+        if(Objects.isNull(loginStaff)){
+            return CommonResult.error(400,"用户名或密码错误");
+        }
         String staffAccount = loginStaff.getStaff().getStaffAccount().toString();
         String jwt = JwtUtil.createJWT(staffAccount);
         Map<String,String> map = new HashMap<>();

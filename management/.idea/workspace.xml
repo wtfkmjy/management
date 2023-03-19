@@ -23,46 +23,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d048aaf2-ef1e-4536-9477-987d50e79bd3" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/../demo7/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/management/handle/AccessDeniedHandlerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Redis-x64-3.2.100/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Redis-x64-3.2.100/dump.rdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RecordController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/StaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/StaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/domain/LoginStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/domain/LoginStaff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/Record.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/RecordService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/StaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/StaffService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/CustomerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/RecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/RecordServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/StaffDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/StaffDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/StaffServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/StaffServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/utils/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/utils/CommonResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/ChatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/RecordController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/StaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/StaffController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/domain/LoginStaff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/domain/LoginStaff.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/filter/JwtAuthenticationTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/filter/JwtAuthenticationTokenFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/pojo/Record.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/pojo/Record.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/RecordService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/StaffService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/StaffService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/CustomerServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/RecordServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/RecordServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/StaffDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/StaffDetailsServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/StaffServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/StaffServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/management-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/management-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/management-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/management-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.ManagementApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.ManagementApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.mapper.MapperTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.mapper.MapperTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.management.ManagementApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.management.ManagementApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.management.mapper.MapperTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.management.mapper.MapperTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +69,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -109,6 +102,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../tree-hole-back-end-master/tree-hole-back-end" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
@@ -118,33 +113,15 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.management.controller" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.ManagementApplication">
-    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.management.CodeGenerator" />
-      <module name="management" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.management.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JwtUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.management.utils.JwtUtil" />
-      <module name="management" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.management.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -156,48 +133,78 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ChatControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="management" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.management.mapper.*" />
+          <option name="PATTERN" value="com.example.management.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.management.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.example.management.mapper.MapperTest" />
+      <option name="PACKAGE_NAME" value="com.example.management.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.management.controller.ChatControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapperTest.customerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="management" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.management.mapper.*" />
+          <option name="PATTERN" value="com.example.management.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.management.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.example.management.mapper.MapperTest" />
-      <option name="METHOD_NAME" value="customerTest" />
+      <option name="PACKAGE_NAME" value="com.example.management.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.management.controller.LoginControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginControllerTest.loginSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.management.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.management.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.management.controller.LoginControllerTest" />
+      <option name="METHOD_NAME" value="loginSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapperTest.passwordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StaffControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="management" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.management.mapper.*" />
+          <option name="PATTERN" value="com.example.management.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.management.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.example.management.mapper.MapperTest" />
-      <option name="METHOD_NAME" value="passwordTest" />
+      <option name="PACKAGE_NAME" value="com.example.management.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.management.controller.StaffControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StaffControllerTest.selectAllSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.management.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.management.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.management.controller.StaffControllerTest" />
+      <option name="METHOD_NAME" value="selectAllSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -218,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.JwtUtil" />
-        <item itemvalue="JUnit.MapperTest.passwordTest" />
-        <item itemvalue="JUnit.MapperTest" />
-        <item itemvalue="JUnit.MapperTest.customerTest" />
-        <item itemvalue="应用程序.CodeGenerator" />
+        <item itemvalue="JUnit.LoginControllerTest" />
+        <item itemvalue="JUnit.ChatControllerTest" />
+        <item itemvalue="JUnit.StaffControllerTest" />
+        <item itemvalue="JUnit.StaffControllerTest.selectAllSuccess" />
+        <item itemvalue="JUnit.LoginControllerTest.loginSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +254,7 @@
       <workItem from="1679027691431" duration="26550000" />
       <workItem from="1679138716349" duration="132000" />
       <workItem from="1679138903867" duration="7208000" />
-      <workItem from="1679213527612" duration="6429000" />
+      <workItem from="1679213527612" duration="23678000" />
     </task>
     <servers />
   </component>
@@ -267,18 +274,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1678893032684">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1679236463508">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1678893032684" />
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1679236463508" />
     <state x="602" y="213" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1679217939565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="602" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1679217939565" />
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1679217797790">
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1679231467462">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1679217797790" />
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1679231467462" />
     <state x="537" y="279" width="462" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1679143407612">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -287,38 +294,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1678881976595" />
-    <state width="1478" height="271" key="GridCell.Tab.0.bottom" timestamp="1679220504480">
+    <state width="1493" height="243" key="GridCell.Tab.0.bottom" timestamp="1679238085556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="271" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1679220504480" />
-    <state width="1478" height="271" key="GridCell.Tab.0.center" timestamp="1679220504480">
+    <state width="1493" height="243" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1679238085556" />
+    <state width="1493" height="243" key="GridCell.Tab.0.center" timestamp="1679238085556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="271" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1679220504480" />
-    <state width="1478" height="271" key="GridCell.Tab.0.left" timestamp="1679220504480">
+    <state width="1493" height="243" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1679238085556" />
+    <state width="1493" height="243" key="GridCell.Tab.0.left" timestamp="1679238085556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="271" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1679220504480" />
-    <state width="1478" height="271" key="GridCell.Tab.0.right" timestamp="1679220504480">
+    <state width="1493" height="243" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1679238085556" />
+    <state width="1493" height="243" key="GridCell.Tab.0.right" timestamp="1679238085556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="271" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1679220504480" />
-    <state width="1478" height="271" key="GridCell.Tab.1.bottom" timestamp="1679220504480">
+    <state width="1493" height="243" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1679238085556" />
+    <state width="1493" height="243" key="GridCell.Tab.1.bottom" timestamp="1679237669293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="271" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1679220504480" />
-    <state width="1478" height="271" key="GridCell.Tab.1.center" timestamp="1679220504480">
+    <state width="1493" height="243" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1679237669293" />
+    <state width="1493" height="243" key="GridCell.Tab.1.center" timestamp="1679237669293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="271" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1679220504480" />
-    <state width="1478" height="271" key="GridCell.Tab.1.left" timestamp="1679220504480">
+    <state width="1493" height="243" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1679237669293" />
+    <state width="1493" height="243" key="GridCell.Tab.1.left" timestamp="1679237669293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="271" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1679220504480" />
-    <state width="1478" height="271" key="GridCell.Tab.1.right" timestamp="1679220504480">
+    <state width="1493" height="243" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1679237669293" />
+    <state width="1493" height="243" key="GridCell.Tab.1.right" timestamp="1679237669293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="271" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1679220504480" />
+    <state width="1493" height="243" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1679237669293" />
     <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1679063813238">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -339,6 +346,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1678896842713" />
+    <state x="669" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1679235043501">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="669" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1679235043501" />
     <state x="322" y="73" key="new project wizard" timestamp="1678881453039">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

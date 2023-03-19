@@ -53,4 +53,10 @@ public class StaffServiceImpl extends ServiceImpl<StaffMapper, Staff> implements
         staffMapper.insert(staff);
         return CommonResult.success();
     }
+
+    @Override
+    public CommonResult updateStaff(Staff staff) {
+        staffMapper.updateById(staff);
+        return CommonResult.success();
+    }
 }

@@ -54,4 +54,13 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
         }
         return CommonResult.success(customer);
     }
+
+    @Override
+    public CommonResult updateCustomer(Customer customer) {
+        if(customer == null){
+            return CommonResult.error(400,"用户不存在");
+        }
+        customerMapper.updateById(customer);
+        return CommonResult.success();
+    }
 }

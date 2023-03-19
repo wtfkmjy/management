@@ -40,5 +40,11 @@ public class CustomerController {
     public CommonResult selectById(int customerId){
         return customerService.selectById(customerId);
     }
+
+    @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
+    @PostMapping("/update")
+    public CommonResult updateCustomer(Customer customer){
+        return customerService.updateCustomer(customer);
+    }
 }
 
