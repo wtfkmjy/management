@@ -27,11 +27,11 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public CommonResult login(Staff staff) {
-        System.out.println("nihao");
+        //System.out.println("nihao");
         System.out.println(staff);
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(staff.getStaffAccount(),staff.getStaffPassword());
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
-        System.out.println("hi");
+        //System.out.println("hi");
         if(Objects.isNull(authenticate)){
             return CommonResult.error(400,"用户名不存在");
         }
@@ -39,7 +39,11 @@ public class LoginServiceImpl implements LoginService {
         String staffAccount = loginStaff.getStaff().getStaffAccount().toString();
         String jwt = JwtUtil.createJWT(staffAccount);
         Map<String,String> map = new HashMap<>();
-        System.out.println("hello");
+        //System.out.println("hello");
+        map.put("staffId",loginStaff.getStaff().getStaffId().toString());
+        if(loginStaff.getStaff().getStaffName().toString() != null){
+            map.put("staffName",loginStaff.getStaff().getStaffName().toString());
+        }
         map.put("token",jwt);
         redisCache.setCacheObject("login" + staffAccount,loginStaff);
         return CommonResult.success(map);
@@ -53,7 +57,7 @@ public class LoginServiceImpl implements LoginService {
 
         LoginStaff loginUser = (LoginStaff) authentication.getPrincipal();
         String staffAccount = loginUser.getStaff().getStaffAccount();
-
+        System.out.println("logout");
         //根据userid找到redis对应值进行删除
         redisCache.deleteObject("login"+ staffAccount);
         return CommonResult.success();

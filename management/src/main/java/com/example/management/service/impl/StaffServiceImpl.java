@@ -42,16 +42,12 @@ public class StaffServiceImpl extends ServiceImpl<StaffMapper, Staff> implements
     }
 
     @Override
-    public CommonResult setAccount(String staffAccount, String staffPassword, String confirmPassword) {
-        if(!staffPassword.equals(confirmPassword)){
-            return CommonResult.error(400,"密码不一致");
-        }
+    public CommonResult setAccount(Staff staff) {
         QueryWrapper wrapper = new QueryWrapper();
-        wrapper.eq("staffAccount",staffAccount);
+        wrapper.eq("staffAccount",staff.getStaffAccount());
         if(staffMapper.selectCount(wrapper) > 0){
             return CommonResult.error(400,"账号已被注册");
         }
-        Staff staff = new Staff();
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         staff.setStaffPassword(bCryptPasswordEncoder.encode(staff.getStaffPassword()));
         staffMapper.insert(staff);

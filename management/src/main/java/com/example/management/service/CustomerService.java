@@ -11,5 +11,7 @@ public interface CustomerService extends IService<Customer> {
 
     CommonResult addCustomer(Customer customer);
 
-    CommonResult deleteCustomer(String customerId);
+    CommonResult deleteCustomer(int customerId);
+
+    CommonResult selectById(int customerId);
 }

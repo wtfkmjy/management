@@ -12,5 +12,5 @@ public interface StaffService extends IService<Staff> {
 
     CommonResult selectByJob(Staff staff);
 
-    CommonResult setAccount(String staffAccount, String staffPassword, String confirmPassword);
+    CommonResult setAccount(Staff staff);
 }

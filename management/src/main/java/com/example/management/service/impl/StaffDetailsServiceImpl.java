@@ -1,6 +1,7 @@
 package com.example.management.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.management.mapper.StaffMapper;
 import com.example.management.domain.LoginStaff;
 import com.example.management.pojo.Staff;
@@ -12,6 +13,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -37,9 +40,12 @@ public class StaffDetailsServiceImpl implements UserDetailsService {
 
 
         //TODO (授权，即查询用户具有哪些权限)查询对应的用户信息
-
-
+        QueryWrapper wrapper = new QueryWrapper();
+        wrapper.eq("staffAccount",staffAccount);
+        Staff staff1 = staffMapper.selectOne(wrapper);
+        List<String> list = new ArrayList<>(Arrays.asList(staff1.getStaffJob(),staff1.getDepartment()));
         //把数据封装成UserDetails返回
-        return new LoginStaff(staff);
+        System.out.println(list);
+        return new LoginStaff(staff,list);
     }
 }

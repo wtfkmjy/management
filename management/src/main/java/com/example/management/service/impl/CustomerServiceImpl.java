@@ -34,7 +34,7 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
     }
 
     @Override
-    public CommonResult deleteCustomer(String customerId) {
+    public CommonResult deleteCustomer(int customerId) {
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("customerId",customerId);
         if(customerMapper.selectCount(wrapper) == 0){
@@ -42,5 +42,16 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
         }
         customerMapper.delete(wrapper);
         return CommonResult.success();
+    }
+
+    @Override
+    public CommonResult selectById(int customerId) {
+        QueryWrapper wrapper = new QueryWrapper();
+        wrapper.eq("customerId",customerId);
+        Customer customer = customerMapper.selectOne(wrapper);
+        if(customer == null){
+            return CommonResult.error(400,"用户不存在");
+        }
+        return CommonResult.success(customer);
     }
 }

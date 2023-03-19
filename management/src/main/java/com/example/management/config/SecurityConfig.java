@@ -1,6 +1,8 @@
 package com.example.management.config;
 
 import com.example.management.filter.JwtAuthenticationTokenFilter;
+import com.example.management.handle.AccessDeniedHandlerImpl;
+import com.example.management.handle.AuthenticationEntryPointImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,6 +35,12 @@ public class SecurityConfig {
     @Autowired
     private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
 
+    @Autowired
+    private AccessDeniedHandlerImpl accessDeniedHandler;
+
+    @Autowired
+    private AuthenticationEntryPointImpl authenticationEntryPoint;
+
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
@@ -54,6 +62,10 @@ public class SecurityConfig {
                 .addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class)
                 // 认证用户时用户信息加载配置，注入springAuthUserService
                 //.userDetailsService(xxxAuthUserService)
-                .build();
+                .exceptionHandling()
+                .authenticationEntryPoint(authenticationEntryPoint)
+                .accessDeniedHandler(accessDeniedHandler)
+                .and().cors()
+                .and().build();
     }
 }
