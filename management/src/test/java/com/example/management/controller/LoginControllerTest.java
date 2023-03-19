@@ -29,7 +29,7 @@ class LoginControllerTest {
     @Test
     void loginSuccess() {  //测试成功登录
         mvc = MockMvcBuilders.webAppContextSetup(wac).build();
-        RequestBuilder request = post("http://localhost:9090/login")
+        RequestBuilder request = post("http://localhost:9090/user/login")
                 .param("staffAccount","abcdeeeee")
                 .param("staffPassword","123456");
         try{
@@ -47,7 +47,7 @@ class LoginControllerTest {
     @Test
     void accountError() {  //测试账号错误
         mvc = MockMvcBuilders.webAppContextSetup(wac).build();
-        RequestBuilder request = post("http://localhost:9090/login")
+        RequestBuilder request = post("http://localhost:9090/user/login")
                 .param("staffAccount","abcdeeee")
                 .param("staffPassword","123456");
         try{
@@ -65,7 +65,7 @@ class LoginControllerTest {
     @Test
     void passwordError() {  //测试账号错误
         mvc = MockMvcBuilders.webAppContextSetup(wac).build();
-        RequestBuilder request = post("http://localhost:9090/login")
+        RequestBuilder request = post("http://localhost:9090/user/login")
                 .param("staffAccount","abcdeeeee")
                 .param("staffPassword","1234");
         try{
@@ -81,6 +81,33 @@ class LoginControllerTest {
     }
 
     @Test
-    void logout() {
+    void logoutSuccess() {  //成功注销
+        mvc = MockMvcBuilders.webAppContextSetup(wac).build();
+        RequestBuilder request = post("http://localhost:9090/user/logout")
+                .header("token","eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwOTllYTYzMTYwMzg0N2JhODE1ZDhjYzg5YzE2ZmZmNCIsInN1YiI6ImFiYyIsImlzcyI6Ind0ZmttankiLCJpYXQiOjE2NzkyMjY2MDMsImV4cCI6MTY3OTIzMDIwM30.-GYSwFk0H9_PnN9T9FGLdLewVZOKEEGvKCx892p1tGk");
+        try{
+            String response = mvc.perform(request).andReturn().getResponse().getContentAsString();
+            ObjectMapper mapper = new ObjectMapper();
+            CommonResult<?> result = mapper.readerFor(CommonResult.class).readValue(response);
+            System.out.println(result);
+            Assertions.assertEquals(result.getCode(), 200);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    void logoutError() {  //注销失败
+        mvc = MockMvcBuilders.webAppContextSetup(wac).build();
+        RequestBuilder request = post("http://localhost:9090/user/logout");
+        try{
+            String response = mvc.perform(request).andReturn().getResponse().getContentAsString();
+            ObjectMapper mapper = new ObjectMapper();
+            CommonResult<?> result = mapper.readerFor(CommonResult.class).readValue(response);
+            System.out.println(result);
+            Assertions.assertEquals(result.getCode(), 400);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
