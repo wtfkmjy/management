@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>纯鹿人</title>
+  <!-- 引入Vue.js -->
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Lato|Roboto|Poppins&display=swap">
+  <script src="./routes.js"></script>
+</head>
+
+<body style="overflow: hidden;">
+ <div id="left1">
+    <span class="head">
+      <img mode="withFix" class="h_img" src="./imge/yizi.jfif">
+    </span>
+    <span class="name">twq</span>
+    <span class="setting">
+    <img mode="withFix" style="width: 30%;" src="./imge/setting.png">
+    </span>
+    <div class="allicon">
+      <div class="icon">
+        <img class="left_icon" src="./imge/work.png">
+        <text class="txt">办公</text>
+      </div>
+      <div class="icon">
+        <img class="left_icon" src="./imge/usual.png">
+        <text class="txt">常用</text>
+      </div>
+      <div class="icon">
+        <img class="active" src="./imge/more2.png">
+        <text class="active_txt">客户</text>
+      </div>
+      <div class="icon">
+        <img class="left_icon" src="./imge/more.png">
+        <text class="txt">更多</text>
+      </div>
+    </div>
+ </div>
+ <div class="rightAll" style="flex:1;">
+    <div class="right">
+      <div id="left2">
+          <div class="search-box">
+            <button type="submit" class="search-button"><img mode="withFix" src="./imge/search.png"></button>
+            <input type="text"  class="search-input" name="q" placeholder="输入搜索词">
+          </div>
+          <div class="list">
+            <span class="list_span">
+              <img mode="withFix" src="./imge/customer.png">
+              <a>全部客户</a>
+            </span>
+            <span class="list_span">
+              <img mode="withFix" src="./imge/follow.png">
+              <a>联系更进</a>
+            </span>
+            <span class="list_span">
+              <img mode="withFix" src="./imge/">
+              <a>群聊汇总</a>
+            </span>
+          </div>
+        </div>
+        <div id="right2">
+          <div class="top">
+            <div class="top_button"><span>不限</span><img mode="withFix" src="./imge/down.png"></div>
+            <div class="search-box">
+              <input type="text"  class="search-input" name="q" placeholder="输入客户">
+              <button type="submit" class="search-button"><img mode="withFix" src="./imge/search.png"></button>
+            </div>
+            <span class="other">更多搜索</span>
+            <span class="other">撞客查询</span>
+            <div class="icon">
+              <img mode="withFix" src="./imge/increase2.png">
+              <img mode="withFix" src="./imge/search.png">
+              <img mode="withFix" src="./imge/search.png">
+              <img mode="withFix" src="./imge/search.png">
+              <img mode="withFix" src="./imge/search.png">
+            </div>
+          </div>
+          <div class="middle">
+            <ul class="page_button">
+              <li class="normal">全部</li>
+              <li class="active" >今日新增</li>
+              <li class="normal">从未联系</li>
+              <li class="normal">今日跟进过</li>
+              <li class="normal">近7天联系过</li>
+              <li class="normal">7天未联系过</li>
+            </ul>
+            <div class="alldata">
+              <div class="used_data">
+                <div class="data_button">
+                  <span><img src="./imge/delete.png">搜索</span>
+                  <span><img src="./imge/down-circle.png">新建</span>
+                  <span><img>导入<img style="margin-left: 2rem;">导出</span>
+                  <span style="margin-left: auto;">排序<img style="margin-left: 1rem;"></span>
+                </div>
+                <iframe src="table.html" frameborder="0" width="98%" height="700px" style="margin-top: 5px;"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+ </div>
+</body>
+
+
+</html>
