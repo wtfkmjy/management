@@ -38,8 +38,7 @@ public class StaffDetailsServiceImpl implements UserDetailsService {
             //throw new RuntimeException("用户名或者密码错误");
             return null;
         }
-
-
+        System.out.println("查询到的密码："+staff.getStaffPassword());
         //TODO (授权，即查询用户具有哪些权限)查询对应的用户信息
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("staffAccount",staffAccount);

@@ -20,8 +20,10 @@ public class ChatController {
 
     @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
     @PostMapping("/select")
-    private CommonResult selectAll(){
+    public CommonResult selectAll(){
+
         return chatService.selectAll();
     }
+
 }
 

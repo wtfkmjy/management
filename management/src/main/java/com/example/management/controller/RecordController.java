@@ -20,19 +20,19 @@ public class RecordController {
 
     @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
     @PostMapping("/select")
-    private CommonResult selectAll(){
+    public CommonResult selectAll(){
         return recordService.selectAll();
     }
 
     @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
     @PostMapping("/select/customer")
-    private CommonResult selectById(int customerId){
+    public CommonResult selectById(int customerId){
         return recordService.selectById(customerId);
     }
 
     @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
     @PostMapping("/select/chat")
-    private CommonResult selectByChatId(int chatId){
+    public CommonResult selectByChatId(int chatId){
         return recordService.selectByChatId(chatId);
     }
 }

@@ -28,10 +28,11 @@ public class LoginServiceImpl implements LoginService {
     @Override
     public CommonResult login(Staff staff) {
         //System.out.println("nihao");
-        System.out.println(staff);
+
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(staff.getStaffAccount(),staff.getStaffPassword());
+        System.out.println("验证1");
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
-        //System.out.println("hi");
+
         if(Objects.isNull(authenticate)){
             return CommonResult.error(400,"用户名不存在");
         }

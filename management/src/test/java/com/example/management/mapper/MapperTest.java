@@ -30,4 +30,10 @@ public class MapperTest {
         //PasswordEncoder bCryptPasswordEncoder = new PasswordEncoder();
         System.out.println(passwordEncoder.encode("123456"));
     }
+    @Autowired
+    private ChatMapper mapper;
+    @Test
+    public void chatMapperTest(){
+        System.out.println(mapper.selectList(null));
+    }
 }
