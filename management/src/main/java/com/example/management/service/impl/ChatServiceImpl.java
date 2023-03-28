@@ -12,7 +12,7 @@ import java.util.List;
 
 @Service
 public class ChatServiceImpl extends ServiceImpl<ChatMapper, Chat> implements ChatService {
-    @Autowired
+    @Autowired(required = false)
     private ChatMapper chatMapper;
 
     @Override
