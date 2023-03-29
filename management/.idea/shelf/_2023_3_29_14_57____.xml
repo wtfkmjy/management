@@ -1,0 +1,24 @@
+<changelist name="在进行更新之前于_2023_3_29_14_57_取消提交了变更_[默认的]" date="1680073041813" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2023_3_29_14_57_取消提交了变更_[默认的]/shelved.patch" />
+  <option name="DESCRIPTION" value="在进行更新之前于 2023/3/29 14:57 取消提交了变更 [默认的]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/example/management/controller/ChatController.class" />
+    <option name="AFTER_PATH" value="target/classes/com/example/management/controller/ChatController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2023_3_29_14_57_取消提交了变更_[默认的]/ChatController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/test-classes/com/example/management/mapper/MapperTest.class" />
+    <option name="AFTER_PATH" value="target/test-classes/com/example/management/mapper/MapperTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2023_3_29_14_57_取消提交了变更_[默认的]/MapperTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/example/management/controller/RecordController.class" />
+    <option name="AFTER_PATH" value="target/classes/com/example/management/controller/RecordController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2023_3_29_14_57_取消提交了变更_[默认的]/RecordController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../Redis-x64-3.2.100/dump.rdb" />
+    <option name="AFTER_PATH" value="../Redis-x64-3.2.100/dump.rdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2023_3_29_14_57_取消提交了变更_[默认的]/dump.rdb" />
+  </binary>
+</changelist>
