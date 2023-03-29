@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.management.mapper.ManuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.Manu">
+        <id column="manuId" property="manuId" />
+        <result column="manuName" property="manuName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        manuId, manuName
+    </sql>
+    
+<!--    <select id="selectPermsById" resultType="java.lang.String">-->
+<!--        select distinct m.manuName-->
+<!--        from staff_role sr-->
+<!--                left join role r on sr.roleId = r.roleId-->
+<!--                left join role_manu rm on sr.roleId = rm.roleId-->
+<!--                left join manu m on m.manuId = rm.manuId-->
+<!--        where staffId = #{staffId}-->
+<!--           select staffName from staff where staffId = #{staffId}-->
+<!--    </select>-->
+
+</mapper>

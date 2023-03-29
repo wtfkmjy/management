@@ -25,15 +25,27 @@ public class MapperTest {
 //    }
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Autowired(required = false)
+    private ManuMapper manuMapper;
+
+    @Autowired(required = false)
+    private CustomerMapper customerMapper;
     @Test
-    public void passwordTest(){
-        //PasswordEncoder bCryptPasswordEncoder = new PasswordEncoder();
-        System.out.println(passwordEncoder.encode("123456"));
+    public void manuMapperTest(){
+        List<String> strings = manuMapper.selectPermsById(1);
+        //Customer customer = customerMapper.selectMyCustomer(1);
+        System.out.println(strings);
     }
-    @Autowired
-    private ChatMapper mapper;
-    @Test
-    public void chatMapperTest(){
-        System.out.println(mapper.selectList(null));
-    }
+//    @Test
+//    public void passwordTest(){
+//        //PasswordEncoder bCryptPasswordEncoder = new PasswordEncoder();
+//        System.out.println(passwordEncoder.encode("123456"));
+//    }
+//    @Autowired
+//    private ChatMapper mapper;
+//    @Test
+//    public void chatMapperTest(){
+//        System.out.println(mapper.selectList(null));
+//    }
 }

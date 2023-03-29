@@ -19,31 +19,31 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
+    @PreAuthorize("hasAuthority('获取客户信息')")
     @PostMapping("/select")
     public CommonResult selectAll(){
         return customerService.selectAll();
     }
 
-    @PreAuthorize("hasAuthority('销售部')")
+    @PreAuthorize("hasAuthority('添加与修改客户')")
     @PostMapping("/add")
     public CommonResult addCustomer(Customer customer){
         return customerService.addCustomer(customer);
     }
 
-    @PreAuthorize("hasAuthority('销售部')")
+    @PreAuthorize("hasAuthority('删除客户')")
     @PostMapping("/delete")
     public CommonResult deleteCustomer(int customerId) {
         return customerService.deleteCustomer(customerId);
     }
 
-    @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
+    @PreAuthorize("hasAuthority('获取客户信息')")
     @PostMapping("/select/id")
     public CommonResult selectById(int customerId){
         return customerService.selectById(customerId);
     }
 
-    @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
+    @PreAuthorize("hasAuthority('添加与修改客户')")
     @PostMapping("/update")
     public CommonResult updateCustomer(Customer customer){
         return customerService.updateCustomer(customer);

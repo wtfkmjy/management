@@ -49,7 +49,7 @@ public class CodeGenerator {
         gc.setOutputDir(projectPath + "/src/main/java");//设置代码生成路径
         gc.setFileOverride(true);//是否覆盖以前文件
         gc.setOpen(false);//是否打开生成目录
-        gc.setAuthor("yixin");//设置项目作者名称
+        gc.setAuthor("zerowo");//设置项目作者名称
         gc.setIdType(IdType.AUTO);//设置主键策略
         gc.setBaseResultMap(true);//生成基本ResultMap
         gc.setBaseColumnList(true);//生成基本ColumnList
