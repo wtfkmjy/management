@@ -2,6 +2,7 @@ package com.example.management.service;
 
 import com.example.management.pojo.RoleManu;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.management.utils.CommonResult;
 
 /**
  * <p>
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface RoleManuService extends IService<RoleManu> {
 
+    CommonResult setRoleManu(String roleName, String manuName);
 }

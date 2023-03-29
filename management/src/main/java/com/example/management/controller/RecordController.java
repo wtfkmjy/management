@@ -18,19 +18,19 @@ public class RecordController {
     @Autowired
     private RecordService recordService;
 
-    @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
+    @PreAuthorize("hasAuthority('查找聊天记录')")
     @PostMapping("/select")
     public CommonResult selectAll(){
         return recordService.selectAll();
     }
 
-    @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
+    @PreAuthorize("hasAnyAuthority('查找聊天记录')")
     @PostMapping("/select/customer")
     public CommonResult selectById(int customerId){
         return recordService.selectById(customerId);
     }
 
-    @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
+    @PreAuthorize("hasAnyAuthority('查找聊天记录')")
     @PostMapping("/select/chat")
     public CommonResult selectByChatId(int chatId){
         return recordService.selectByChatId(chatId);

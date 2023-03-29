@@ -30,5 +30,23 @@ public class Manu implements Serializable {
     @TableField("manuName")
     private String manuName;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
+    public Integer getManuId() {
+        return manuId;
+    }
+
+    public void setManuId(Integer manuId) {
+        this.manuId = manuId;
+    }
+
+    public String getManuName() {
+        return manuName;
+    }
+
+    public void setManuName(String manuName) {
+        this.manuName = manuName;
+    }
 }

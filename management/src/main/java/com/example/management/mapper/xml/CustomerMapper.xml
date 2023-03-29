@@ -20,4 +20,8 @@
         customerId, customerName, customerEmail, customerGender, customerAddress, customerPhone, customerJob, customerJointime, chargeStaff
     </sql>
 
+    <select id="selectMyCustomer" resultType="com.example.management.pojo.Customer">
+        select * from customer where customerId = #{customerId}
+    </select>
+
 </mapper>

@@ -18,7 +18,7 @@ public class ChatController {
     @Autowired
     private ChatService chatService;
 
-    @PreAuthorize("hasAnyAuthority('销售部','营销部','服务部')")
+    @PreAuthorize("hasAnyAuthority('获取群聊信息')")
     @PostMapping("/select")
     public CommonResult selectAll(){
 

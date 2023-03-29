@@ -2,6 +2,7 @@ package com.example.management.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.management.mapper.ManuMapper;
 import com.example.management.mapper.StaffMapper;
 import com.example.management.domain.LoginStaff;
 import com.example.management.pojo.Staff;
@@ -24,6 +25,9 @@ public class StaffDetailsServiceImpl implements UserDetailsService {
     @Autowired(required = false)
     private StaffMapper staffMapper;
 
+    @Autowired(required = false)
+    private ManuMapper manuMapper;
+
 
     //实现UserDetailsService接口，重写UserDetails方法，自定义用户的信息从数据中查询
     @Override
@@ -43,7 +47,9 @@ public class StaffDetailsServiceImpl implements UserDetailsService {
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("staffAccount",staffAccount);
         Staff staff1 = staffMapper.selectOne(wrapper);
-        List<String> list = new ArrayList<>(Arrays.asList(staff1.getStaffJob(),staff1.getDepartment()));
+        //List<String> list = new ArrayList<>(Arrays.asList(staff1.getStaffJob(),staff1.getDepartment()));
+        //System.out.println("hi");
+        List<String> list = manuMapper.selectPermsById(staff1.getStaffId());
         //把数据封装成UserDetails返回
         System.out.println(list);
         return new LoginStaff(staff,list);

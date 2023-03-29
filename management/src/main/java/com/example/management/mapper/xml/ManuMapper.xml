@@ -12,5 +12,15 @@
     <sql id="Base_Column_List">
         manuId, manuName
     </sql>
+    
+<!--    <select id="selectPermsById" resultType="java.lang.String">-->
+<!--        select distinct m.manuName-->
+<!--        from staff_role sr-->
+<!--                left join role r on sr.roleId = r.roleId-->
+<!--                left join role_manu rm on sr.roleId = rm.roleId-->
+<!--                left join manu m on m.manuId = rm.manuId-->
+<!--        where staffId = #{staffId}-->
+<!--           select staffName from staff where staffId = #{staffId}-->
+<!--    </select>-->
 
 </mapper>

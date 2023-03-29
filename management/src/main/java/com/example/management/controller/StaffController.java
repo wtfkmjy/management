@@ -15,32 +15,32 @@ public class StaffController {
     @Autowired
     private StaffService staffService;
 
-    @PreAuthorize("hasAnyAuthority('人事部','主管')")
+    @PreAuthorize("hasAuthority('获取员工信息')")
     @GetMapping("/select")
     public CommonResult selectAll(){
         return staffService.selectAll();
     }
 
-    @PreAuthorize("hasAnyAuthority('人事部','主管')")
+    @PreAuthorize("hasAuthority('获取员工信息')")
     @PostMapping("/select/department")
     public CommonResult selectByDepartment(String departmentName){
         return staffService.selectByDepartment(departmentName);
     }
 
-    @PreAuthorize("hasAnyAuthority('人事部','主管')")
+    @PreAuthorize("hasAuthority('获取员工信息')")
     @PostMapping("/select/job")
     public CommonResult selectByJob(Staff staff){
         System.out.println(staff);
         return staffService.selectByJob(staff);
     }
 
-    @PreAuthorize("hasAuthority('主管')")
+    @PreAuthorize("hasAuthority('添加与修改员工')")
     @PostMapping("/account")
     public CommonResult setAccount(Staff staff){
         return staffService.setAccount(staff);
     }
 
-    @PreAuthorize("hasAuthority('主管')")
+    @PreAuthorize("hasAuthority('添加与修改员工')")
     @PostMapping
     public CommonResult updateStaff(Staff staff){
         return staffService.updateStaff(staff);
