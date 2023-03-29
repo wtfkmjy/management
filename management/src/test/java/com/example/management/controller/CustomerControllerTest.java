@@ -118,7 +118,15 @@ class CustomerControllerTest {
     }
 
     @Test
-    void updateCustomer() {
-
+    @WithMockUser(authorities = {"添加与修改客户"})
+    void updateCustomerWithAuthority() {
+        Customer test_cusomer=new Customer(1,"","","","","","","","");
+        customerController.updateCustomer(test_cusomer);
+    }
+    @Test
+    @WithMockUser
+    void updateCustomer(){
+        Customer test_cusomer=new Customer(1,"","","","","","","","");
+        Assertions.assertThrows(AccessDeniedException.class,()->customerController.updateCustomer(test_cusomer));
     }
 }
