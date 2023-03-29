@@ -33,6 +33,7 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
         return CommonResult.success();
     }
 
+
     @Override
     public CommonResult deleteCustomer(int customerId) {
         QueryWrapper wrapper = new QueryWrapper();

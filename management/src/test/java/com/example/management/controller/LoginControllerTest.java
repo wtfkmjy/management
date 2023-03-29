@@ -1,5 +1,9 @@
 package com.example.management.controller;
 
+import com.alibaba.druid.support.json.JSONUtils;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.parser.Feature;
 import com.example.management.utils.CommonResult;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
@@ -7,10 +11,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.serializer.DefaultDeserializer;
+import org.springframework.core.serializer.DefaultSerializer;
+import org.springframework.core.serializer.Deserializer;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -30,18 +40,20 @@ class LoginControllerTest {
     void loginSuccess() {  //测试成功登录
         mvc = MockMvcBuilders.webAppContextSetup(wac).build();
         RequestBuilder request = post("http://localhost:9090/user/login")
-                .param("staffAccount","abcdeeeee")
+                .param("staffAccount","abc")
                 .param("staffPassword","123456");
         try{
             String response = mvc.perform(request).andReturn().getResponse().getContentAsString();
             ObjectMapper mapper = new ObjectMapper();
             CommonResult<?> result = mapper.readerFor(CommonResult.class).readValue(response);
-            System.out.println(result);
-            System.out.println(result.getData());
             Assertions.assertEquals(result.getCode(), 200);
+            JSONObject jsonObject=JSON.parseObject(response);
+            Assertions.assertNotNull(jsonObject.get("data"));
+            Assertions.assertNotNull(jsonObject.getJSONObject("data").getString("token"));
         }catch(Exception e){
             e.printStackTrace();
         }
+
     }
 
     @Test

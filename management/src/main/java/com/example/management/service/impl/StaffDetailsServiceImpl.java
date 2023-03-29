@@ -47,11 +47,10 @@ public class StaffDetailsServiceImpl implements UserDetailsService {
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("staffAccount",staffAccount);
         Staff staff1 = staffMapper.selectOne(wrapper);
-        //List<String> list = new ArrayList<>(Arrays.asList(staff1.getStaffJob(),staff1.getDepartment()));
-        //System.out.println("hi");
+
         List<String> list = manuMapper.selectPermsById(staff1.getStaffId());
         //把数据封装成UserDetails返回
-        System.out.println(list);
+
         return new LoginStaff(staff,list);
     }
 }

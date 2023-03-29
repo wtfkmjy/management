@@ -48,5 +48,8 @@ public class CustomerController {
     public CommonResult updateCustomer(Customer customer){
         return customerService.updateCustomer(customer);
     }
+
+
+
 }
 

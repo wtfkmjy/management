@@ -35,5 +35,7 @@ public class RecordController {
     public CommonResult selectByChatId(int chatId){
         return recordService.selectByChatId(chatId);
     }
+
+
 }
 
