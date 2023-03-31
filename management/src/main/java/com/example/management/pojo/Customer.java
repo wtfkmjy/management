@@ -12,8 +12,6 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@AllArgsConstructor
-@NoArgsConstructor
 
 public class Customer implements Serializable {
 
@@ -45,6 +43,29 @@ public class Customer implements Serializable {
 
     @TableField("chargeStaff")
     private String chargeStaff;
+
+    @TableField("customerQQ")
+    private String customerQQ;
+
+    @TableField("nickname")
+    private String nickname;
+
+    public Customer() {
+    }
+
+    public Customer(Integer customerId, String customerName, String customerEmail, String customerGender, String customerAddress, String customerPhone, String customerJob, String customerJointime, String chargeStaff, String customerQQ, String nickname) {
+        this.customerId = customerId;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerGender = customerGender;
+        this.customerAddress = customerAddress;
+        this.customerPhone = customerPhone;
+        this.customerJob = customerJob;
+        this.customerJointime = customerJointime;
+        this.chargeStaff = chargeStaff;
+        this.customerQQ = customerQQ;
+        this.nickname = nickname;
+    }
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -120,5 +141,21 @@ public class Customer implements Serializable {
 
     public void setChargeStaff(String chargeStaff) {
         this.chargeStaff = chargeStaff;
+    }
+
+    public String getCustomerQQ() {
+        return customerQQ;
+    }
+
+    public void setCustomerQQ(String customerQQ) {
+        this.customerQQ = customerQQ;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 }

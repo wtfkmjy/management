@@ -46,6 +46,17 @@ public class Staff implements Serializable {
     @TableField("department")
     private String department;
 
+    @TableField("staffQQ")
+    private String staffQQ;
+
+    public String getStaffQQ() {
+        return staffQQ;
+    }
+
+    public void setStaffQQ(String staffQQ) {
+        this.staffQQ = staffQQ;
+    }
+
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }

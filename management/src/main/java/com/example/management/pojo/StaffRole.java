@@ -8,6 +8,7 @@ import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import net.bytebuddy.asm.Advice;
 
 /**
  * <p>
@@ -27,11 +28,24 @@ public class StaffRole implements Serializable {
     @TableField("staffId")
     private Integer staffId;
 
+    @TableField("staffName")
+    private String staffName;
+
     @TableField("roleId")
     private Integer roleId;
+
+    @TableField("roleName")
+    private String roleName;
 
     public StaffRole(Integer staffId, Integer roleId) {
         this.staffId = staffId;
         this.roleId = roleId;
+    }
+
+    public StaffRole(Integer staffId, String staffName, Integer roleId, String roleName) {
+        this.staffId = staffId;
+        this.staffName = staffName;
+        this.roleId = roleId;
+        this.roleName = roleName;
     }
 }

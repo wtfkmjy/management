@@ -42,7 +42,7 @@ class CustomerControllerTest {
     private CustomerController customerController;
     @Autowired
     private CustomerService customerService;
-    @Autowired
+    @Autowired(required = false)
     private CustomerMapper customerMapper;
     @BeforeEach
     void setUp() {
@@ -76,7 +76,7 @@ class CustomerControllerTest {
     @Test
     @WithMockUser(authorities = {"添加与修改客户"})
     void addCustomerWithAuthority() throws Exception {
-        Customer test_cusomer=new Customer(1,"","","","","","","","");
+        Customer test_cusomer=new Customer();
         String email= String.valueOf(new Random().nextInt(10000))+"@qq.com";//随机生成一个邮箱
         test_cusomer.setCustomerEmail(email);
         test_cusomer.setCustomerName("kqn");
@@ -94,7 +94,7 @@ class CustomerControllerTest {
     @WithMockUser
     void addCustomer() {
         //断言拒绝访问异常
-        Assertions.assertThrows(AccessDeniedException.class,()-> customerController.addCustomer(new Customer(32823,"asd","123@qq.com","male","","","","","")));
+        Assertions.assertThrows(AccessDeniedException.class,()-> customerController.addCustomer(new Customer(32823,"asd","123@qq.com","male","","","","","","","")));
     }
 
     @Test
@@ -120,13 +120,13 @@ class CustomerControllerTest {
     @Test
     @WithMockUser(authorities = {"添加与修改客户"})
     void updateCustomerWithAuthority() {
-        Customer test_cusomer=new Customer(1,"","","","","","","","");
+        Customer test_cusomer=new Customer();
         customerController.updateCustomer(test_cusomer);
     }
     @Test
     @WithMockUser
     void updateCustomer(){
-        Customer test_cusomer=new Customer(1,"","","","","","","","");
+        Customer test_cusomer=new Customer();
         Assertions.assertThrows(AccessDeniedException.class,()->customerController.updateCustomer(test_cusomer));
     }
 }

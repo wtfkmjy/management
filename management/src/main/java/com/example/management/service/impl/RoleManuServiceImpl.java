@@ -45,7 +45,12 @@ public class RoleManuServiceImpl extends ServiceImpl<RoleManuMapper, RoleManu> i
         if(Objects.isNull(role) || Objects.isNull(manu)){
             return CommonResult.error(400,"角色或权限不存在");
         }
-        roleManuMapper.insert(new RoleManu(role.getRoleId(),manu.getManuId()));
+        wrapper1.eq("manuName",manuName);
+        Integer integer = roleManuMapper.selectCount(wrapper1);
+        if(integer > 0){
+            return CommonResult.error(400,"该角色已有此权限");
+        }
+        roleManuMapper.insert(new RoleManu(role.getRoleId(),roleName,manu.getManuId(),manuName));
         return CommonResult.success();
     }
 }

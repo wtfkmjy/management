@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.management.mapper.FollowupMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.Followup">
+        <result column="staffId" property="staffId" />
+        <result column="staffName" property="staffName" />
+        <result column="customerId" property="customerId" />
+        <result column="customerName" property="customerName" />
+        <result column="contactTime" property="contactTime" />
+        <result column="entryTime" property="entryTime" />
+        <result column="contactInfo" property="contactInfo" />
+        <result column="result" property="result" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        staffId, staffName, customerId, customerName, contactTime, entryTime, contactInfo, result
+    </sql>
+
+</mapper>

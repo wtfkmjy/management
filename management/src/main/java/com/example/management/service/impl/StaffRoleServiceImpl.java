@@ -43,7 +43,12 @@ public class StaffRoleServiceImpl extends ServiceImpl<StaffRoleMapper, StaffRole
         if(Objects.isNull(role) || Objects.isNull(staff)){
             return CommonResult.error(400,"用户或角色不存在");
         }
-        staffRoleMapper.insert(new StaffRole(staff.getStaffId(),role.getRoleId()));
+        wrapper1.eq("roleName",roleName);
+        Integer integer = staffRoleMapper.selectCount(wrapper1);
+        if(integer > 0){
+            return CommonResult.error(400,"该用户已有此角色类型");
+        }
+        staffRoleMapper.insert(new StaffRole(staff.getStaffId(),staffName,role.getRoleId(),roleName));
         return CommonResult.success();
     }
 }
