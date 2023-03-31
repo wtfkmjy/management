@@ -1,0 +1,244 @@
+<link rel="stylesheet" href="./ruangong.css">
+<link rel="stylesheet" href="./lrtk.css">
+<link rel="stylesheet" href="./style-2.css">
+<link rel="stylesheet" href="./iconfont.css">
+<body data-new-gr-c-s-check-loaded="14.1027.0" data-gr-ext-installed="">
+    <section id="h1" class="jawbone-takeover-minimulti jawbone-hero">
+        <i class="jawbone-hero-image" data-hero-image-fixed="true" data-hero-image-fade="true" data-hero-min-opacity=".3" style="opacity: 1.05;">
+            <div class="slideshow">
+                <div class="slideshow-image" style="background-image: url('https://www.kehu51.com/loginfile/imges_new/bay-1440.jpg')"></div>
+                <div class="slideshow-image" style="background-image: url('https://www.kehu51.com/loginfile/imges_new/view-1031064.jpg')"></div>
+                <div class="slideshow-image" style="background-image: url('https://www.kehu51.com/loginfile/imges_new/korea-4353331.jpg')"></div>
+                <div class="slideshow-image" style="background-image: url('https://www.kehu51.com/loginfile/imges_new/1440.jpg')"></div>
+            </div>
+        </i>
+
+        <div class="warp">
+                <div class="logo" style="display: flex; align-items: center;padding-bottom: 20px;" >
+                    <img  style="width: 65px;height: 65px; margin-left: 15%;" src="./wechat.png">
+                    <span style="font-size: 30px;font-weight: bold;margin-left: 10%; color:white; line-height:1.5; text-shadow:2px 2px 2px gray;" >客户管理</span>
+                </div>
+            <div id="loginbox" class="loginBox" >
+                <div class="signContent" >
+                      <div  id="form_key"  class="loginForm" >
+                        
+                           <div class="tabBox"  >
+                               <div class="tabBoxSwitch"><ul class="tabBoxSwitchUl"> <li id="a_user" class="tab-active" >密码登录</li> <li id="a_message" >用户注册</li></ul>
+                               </div>
+                           </div> 
+
+                          <div class="tabContent1" >
+                            <div id="accountLogin" class="tabcont active" >
+                                <div class="tabcontent" >
+                                    <div class="phoneInputGroup">
+                                        <label for="" class="inputLabel phoneLabel">
+                                            <input type="text" name="username" id="username" placeholder="用户名 / 邮箱号" autocomplete="off" class="inputStyle accountUsername">
+                                        </label>
+                                    </div>
+                                </div> 
+    
+                                <div class="tabcontent" >
+                                    <div class="phoneInputGroup">
+                                        <label for="" class="inputLabel phoneLabel">
+                                            <input type="password" name="password" id="password" placeholder="密码" autocomplete="off" class="inputStyle accountPwd">
+                                        </label>
+                                    </div>
+                                </div> 
+                                
+                                <div class="login_box">
+                                    <a class="remember">
+                                      <input type="checkbox" value="1" id="login-radio" name="rptAutoLogin" onclick="return rePassConfirm()" class="rememberbox" style="vertical-align: -2px;">记住用户名
+                                    </a> 
+                                    <a href="https://" class="forget">忘记密码？</a>
+                                </div> 
+    
+                                <div>
+                                    <button id="submit"  name="button1" class="button fromSubmit">登录</button>
+                                </div> 
+                            </div>
+
+                            <div id="telLogin"  class="tabcont "  >
+                                <div class="tabcontent">
+                                    <div class="phoneInputGroup">
+                                    <label for="" class="inputLabel phoneLabel">
+                                        <input type="number" value="" name="username2" id="msgTel" placeholder="手机号" autocomplete="off" class="inputStyle phoneInput">
+                                    </label>
+                                    </div>
+                                </div>
+
+                               <div class="tabcontent">
+                                  <div class="phoneInputGroup">
+                                    <label for="" class="inputLabel">
+                                       <input type="number" value="" name="password2" id="msgCode" placeholder="输入短信验证码" autocomplete="off" class="inputStyle msgInput">
+                                    </label>
+                                  </div>
+                                </div> 
+                                
+                                <div><button id="submit"  name="button2" class="button fromSubmit" style="margin-top: 23px;">用户注册</button></div>
+                            
+                            </div>
+                            
+                          </div>
+                        </div>
+                </div>  
+            </div>           
+        </div>
+      
+    </section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script language="javascript" type="text/javascript">
+/*
+ var button = document.getElementById("a_user");
+button.addEventListener("click", function() {
+
+  myButton.classList.add('tab-active');
+});*/
+
+//登陆
+const myForm = document.querySelector('form');
+const button1 = document.querySelector('button[name="button1"]');
+  const button2 = document.querySelector('button[name="button2"]');
+  button1.addEventListener('click', function() {
+    console.log('点击了按钮 1');
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if(username===''||password==='')
+    {
+        alert("用户名或密码不能为空");
+    }
+    else
+    {
+           console.log(username);
+           console.log(password);
+  
+				$.ajax({
+					type: "POST",
+					url: "http://localhost:9090/user/login",
+					data: {
+                        "staffAccount": username,
+                        "staffPassword":password
+                
+                },
+					success: function(response){
+
+                        console.log(response);
+                       if(response.code==200){
+                         location.href="../main/index.html";
+                         
+                       }
+					},
+					error: function(xhr, status, error){
+						alert("账号或密码错误");
+
+					}
+				});
+	
+    }
+  });
+  button2.addEventListener('click', function() {
+    console.log('点击了按钮 2');
+    var username = document.getElementById("msgTel").value;
+    var password = document.getElementById("msgCode").value;
+    if(username===''||password==='')
+    {
+        alert("用户名或密码不能为空");
+    }
+    else
+    {
+           console.log(username);
+           console.log(password);
+				$.ajax({
+					type: "POST",
+					url: "http://localhost:9090/user/register",
+					data: {
+                        "staffAccount": username,
+                        "staffPassword":password
+                
+                },
+					success: function(response){
+	                    if(response.code==200){
+                            alert("注册成功")
+                            location.href="../login/ruangong.html";
+                        }
+                        console.log(response);
+					},
+					error: function(xhr, status, error){
+						alert("Error: " + error);
+					}
+				});
+	
+    }
+  });
+
+  
+/*
+  $(document).ready(function(){
+			button1.click(function(){
+				var btnId = $(this).attr("id");
+				$.ajax({
+					type: "POST",
+					url: "http://example.com/clickEvent.php",
+					data: {"btnId": btnId},
+					success: function(response){
+						alert(response);
+					},
+					error: function(xhr, status, error){
+						alert("Error: " + error);
+					}
+				});
+			});
+		});*/
+        
+//切换登陆和注册
+function clickli(el) {
+    let i = $(el).index();
+    $(el).addClass("tab-active").siblings('li').removeClass("tab-active");
+    $("div.tabcont").eq(i).addClass("active").siblings().removeClass("active");
+}
+
+$(function () {
+    // tabSwicth
+    $("ul.tabBoxSwitchUl").on('click', 'li', function () {
+        clickli(this);
+        //let i = $(this).index();
+        //$(this).addClass("tab-active").siblings('li').removeClass("tab-active");
+        //$("div.tabcont").eq(i).addClass("active").siblings().removeClass("active");
+        //if ($('#qrLogin').css('display') != 'none') {
+        //    $('#loginType').attr('value', '');
+        //}
+        //else if ($('#accountLogin').css('display') != 'none') {
+        //    $('#loginType').attr('value', '3');
+        //}
+        //else {
+        //    $('#loginType').attr('value', '1');
+        //}
+    });
+
+ 
+   
+
+   
+
+    // ercode tab
+    //$(".swicth-ercode").click(function (e) {
+    //    e.preventDefault();
+    //    $("form#form_key").hide();
+    //    $(".ercodeSignBox").show();
+    //    GetQRCode();
+    //});
+    //$(".switch-input").click(function (e) {
+    //    e.preventDefault();
+    //    $("form#form_key").show();
+    //    $(".ercodeSignBox").hide();
+    //});
+
+    //ercode
+
+    // 提交表单验证
+    
+
+});
+</script></body>

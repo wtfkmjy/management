@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+
+html { font-family: "arial,helvetica,sans-serif","microsoft yahei","宋体"; font-size: 12px; /*overflow-y: scroll;*/ }
+[v-cloak] { display: none; }
+div, span, label, a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
+.warp{width:380px; margin:7% auto 0 auto;}
+
+.loginbox{
+}
+.cd-user-modal-container{ position: relative;
+  width: 382px;
+ 
+  overflow:hidden;}
+.cd-user-modal-container .cd-switcher:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-user-modal-container .cd-switcher li {
+  width: 50%;
+  float: left;
+  text-align: center;margin-top:35px;font-family:Microsoft YaHei; font-size:14px;cursor: pointer; padding-bottom:15px;
+}
+.cd-user-modal-container .cd-switcher li:first-child a {
+  text-decoration:none
+}
+.cd-user-modal-container .cd-switcher li:last-child a {
+  text-decoration:none
+}
+.cd-user-modal-container .cd-switcher a {
+  display: block;
+  width: 100%;
+  line-height: 20px;
+  color: #bdbdbd;
+}
+.cd-user-modal-container .cd-switcher li :hover{ color: #fff;}
+
+.cd-user-modal-container .cd-switcher li a:link#current, .cd-user-modal-container .cd-switcher li a:visited#current { color:#ffffff;}
+
+
+.list{width:318px; margin:15px auto;}
+.listinp{ width:298px; height:38px;padding:0px 10px; border:1px #999999 solid; font-size:14px; color:#fff; background-color:rgba(31,27,24,0.7);}
+.listinp::-webkit-input-placeholder { /* WebKit browsers */color:#999;}
+.listinp:-ms-input-placeholder { /* Internet Explorer 10+ */color:#999;}
+.listinp:focus{ border:1px solid #fff;color:#ffffff;}
+input{outline:none;}
+.listbox{ width:320px; margin:0 auto; font-family:Microsoft YaHei; border-top:1px #bdbdbd solid;text-decoration:none;}
+.forget{font-size:13px; color:#175199; margin-top:15px;}
+.remember{ float:left; font-size:13px;  margin-top:15px; color:#8590a6;}
+.rememberbox{ margin-right:5px;}
+.remember:hover, .forget:hover {text-decoration:none;}
+.forget:hover{ }
+.qqlogin{ width:20px; height:20px; background:url(https://www.kehu51.com/loginfile/imges_new/qq.png); float:right;margin-top:11px; margin-left:-20px;}
+.qqlogin:hover{ background:url(https://www.kehu51.com/loginfile/imges_new/qqhover.png);  cursor:pointer;}
+.login{ width:320px; height:40px; margin:30px auto 20px auto;}
+.login .btn{ border:0; width:320px; height:40px; line-height:30px; background:#078be4; color:#FFF; font-size:14px; font-family:Microsoft YaHei;}
+.login .btn:hover{cursor:pointer; background:#27a8ff;}
+.register{ height:18px;color:#bdbdbd;font-family:Microsoft YaHei; text-align:center; margin-top:20px;}
+.registerfree{ font-size:14px;  margin:10px auto; color:#175199;text-align:center;}
+.registerfree:hover {text-decoration:none; }
+.download{  height:22px;margin:0 auto; margin-top:24px}
+.iPhone { width:125px; height:22px; float:left;}
+.Android{width:125px; height:22px; float:left;}
+.line{ width:1px; height:22px; background:#bdbdbd; float:left;}
+.iphoneicon, .Androidicon, .winicon{ width:22px; height:22px; float:left; margin-left:30px; margin-right:10px;}
+.iphoneicon{ background:url(https://www.kehu51.com/loginfile/imges_new/iphonecolor.png);}
+.iphoneicon:hover{ background:url(https://www.kehu51.com/loginfile/imges_new/iphonehover.png);}
+.Androidicon{ background:url(https://www.kehu51.com/loginfile/imges_new/Androidcolor.png);}
+.Androidicon:hover{ background:url(https://www.kehu51.com/loginfile/imges_new/Androidhover.png);}
+.winicon{ background:url(https://www.kehu51.com/loginfile/imges_new/wincolor.png);}
+.winicon:hover{ background:url(https://www.kehu51.com/loginfile/imges_new/winhover.png);}
+.iPhone a, .Android a{ font-size:13px; color:#bdbdbd; font-family:Microsoft YaHei; text-decoration:none; line-height:22px}
+.iPhone a:hover, .Android a:hover{ color:#FFFFFF;}
+.progresstext{ width:400px; height:60px; text-align:left; margin:0 auto; margin-top:90px; }
+.li-first{font-family:Microsoft YaHei;font-size:12px; line-height:20px; color:#bdbdbd;}
+/* 扫描登录开始 */
+/*.codebox{ width:199px; height:199px; border:1px solid #bdbdbd; margin:0 auto; }*/
+.codebox{ width:150px; height:150px; border:1px solid #bdbdbd; margin:0 auto; text-align:center;padding:3px 1px 1px 2px;background-color:#ffffff;}
+.biglist{ padding-top:20px;}
+.vericode{ width:180px; height:38px; text-indent:5px; border:1px #bdbdbd solid; font-size:12px;background-color:rgba(31,27,24,0.7);}
+.vericode:focus{ border-style:solid; border-color:#ffffff;}
+.error_tip{ width:310px;border:1px #ff6f3d solid; font-size:12px;  margin:0 auto -10px auto; color:#ff6f3d;font-family:微软雅黑 Light; line-height:16px; text-align:justify; padding:3px;}
+.errorimg{ background:url(https://www.kehu51.com/loginfile/imges_new/error.png) top no-repeat; width:14px; height:14px; float:left; margin:3px; }
+
+.header { width: 100%; height: 70px; margin: 0 auto; box-shadow: 0px 4px 7px 0px rgba(46, 46, 46, 0.07); background-color: #fff; }
+.header h1 { position: absolute; top: 7px; padding-left: 2%; }
+.nav { width: 650px; float: right; }
+.menu { float: left; font-size: 0; }
+.menu li { display: inline-block; }
+.menu li a { padding: 25px 15px; font-size: 16px; color: #666666; font-family: Microsoft YaHei; text-decoration: none; line-height: 70px; }
+.menu a:hover { background: #ff8f0b; color: #ffffff; }
+.p-copyright { text-align: center; font-family: Microsoft YaHei; font-size: 13px; padding-bottom: 15px; color: #858585; clear: both; }
+.p-copyright a { color: #858585; text-decoration: none; }
+.footer-copyright { position: fixed; bottom: 0; width:100%;}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active { -webkit-transition-delay: 99999s; -webkit-transition: color 99999s ease-out, background-color 99999s ease-out; }
+
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f6f6f6; border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: #aaa; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #747474; }
+::-webkit-scrollbar-corner { background: #f6f6f6; }
+
+.user-div { float: left; display:flex; flex-direction:column; align-items:center; }
+.user-list { overflow-y: auto; height: 629px; margin-top: 10px; scrollbar-width: thin; }
+.user { position: relative; border-radius: 10px; height:100px; box-shadow: 0 10px 3px -10px rgba(0,0,0,.2); padding: 0 10px; width: 320px; box-sizing: border-box; margin: 10px; color: #303133; cursor: pointer; display: flex; align-items: center; transition-duration: .2s; }
+.user-default { cursor: not-allowed;}
+.user-gray-div { background-color: #F6F7FB; box-shadow:none; }
+.el-delete-btn { display: none; }
+.user-default:hover .el-delete-btn { display: block; }
+.user-comm:hover { box-shadow: 0px 0px 5px 5px rgba(0,0,0,.2); }
+.user-comm:active { box-shadow: 0px 0px 1px 1px rgba(0,0,0,.2); transition-duration: .05s; }
+.user-icon { height: 50px; width: 50px; background-color: #0084ff; line-height: 50px; font-size: 18px; margin: 0; }
+.user-icon-default { background-color: orange; }
+.user-icon-gray { background-color: lightgray; }
+.user-icon-img { background-color: transparent; }
+.user-default-check { font-size: 32px; margin: 0; color: #67C23A; float:right; }
+
+.select-line { float: left; width: 1px; background: #bdbdbd; height: 680px; margin: 0 30px 0 0; }
+
+.user-list .edit-div { margin: 0; float: right; padding-top: 0; }
+.user-list .el-table__header-wrapper { display: none; }
+.user-list .el-table__body tr { background-color: transparent}
+.user-list .el-table__body tr:hover > td { background-color: transparent !important; }
+.user-list .el-table__body tr.current-row > td { background-color: transparent !important; }
+.user-list .el-table td div { padding: 0 5px !important; }
+.user-list .el-table::before{height:0;}
+.user-list .el-table td { border: none; }
+
+.click-cursor { cursor: pointer; }
