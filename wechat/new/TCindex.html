@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <head>
+        <link href="TCindex.css" type="text/css" rel="stylesheet" />
+    </head>
+
+</head>
+<body>
+<!--弹窗进入按钮-->
+<button type="button" onclick="dianwo()">点我</button>
+
+<!--弹窗设置-->
+<div class="zhezhao" id='zhezhao'>
+    <div class="tankuang">
+        <div id="header">
+            <!-- <span>我是弹窗</span>-->
+            <!--顶部栏的标签-->
+            <div class="top_block">
+                <div class="KHinfor">添加新客户<span class="KHinfor_tip">标注有 * 号的字段为必填</span></div>
+            </div>
+            <div id="header-right" onclick="hidder()">x</div>
+
+            <!--主要内容的标签-->
+            <!--第一行-->
+            <div class="KHinfor" >客户信息</div>
+            <div class="KHinfor_1">
+                &nbsp;&nbsp;&nbsp;&nbsp;*电话
+                <input type="text" id="userphone" value="11451411451" disabled="disabled">
+            </div>
+
+            <!--第二行-->
+            <div class="KHinfor_1" >*客户称号
+                <input type="text" id="password" value="123456" disabled="disabled">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                *性别
+                <input class="chk" type="radio" name="xb"  id="nan" checked=checked style="box-shadow: none"/><label for="nan">男</label>
+                <input class="chk" type="radio" name="xb" id="nv"style="box-shadow: none"/><label for="nv">女</label>
+            </div>
+            <!--第三行-->
+            <div class="KHinfor_1" >*客户邮箱
+                <input type="text" id="username" value="大宝" disabled="disabled">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                客户类别
+                <input type="text" id="usertype" value="普通客户" disabled="disabled">
+            </div>
+            <!--第四行-->
+            <div class="KHinfor_1" >*客户地址
+                <input type="text" id="useraddress" value="广东省深圳市南山区" disabled="disabled">
+            </div>
+            <!--第五行-->
+            <div class="KHinfor_1">
+                *获取时间
+                <input type="text" id="userjob" value="2022/1/1" disabled="disabled">
+            </div>
+            <!--第六行-->
+            <div class="KHinfor_1">&nbsp;&nbsp;*负责人 <input type="text" id="userdepart" value="人事部门" disabled="disabled"></div>
+
+            <div class="KHinfor_1" >*客户备注 <textarea class="KHinfor_ex" cols="20" rows="7" style="vertical-align: top"
+                               id="userex" disabled="disabled"> </textarea></div>
+            </br></br></br>
+
+            <!--底部栏修改按钮-->
+            <div class="bottom_block">
+                <div class="KHinfor_renew_block">
+                    <!--            /*修改按钮跳转到修改页面*/-->
+                    <a href="#" class="KHinfor_renew" class="KHinfor_renew">修改</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script> //接口赋值
+
+
+
+    //输入栏赋值
+    document.getElementById("user").value="1";                                       //员工账号
+    document.getElementById("password").value="1234567";                             //员工密码
+    document.getElementById("username").value="Alice";                                 //员工姓名
+    document.getElementById("usertype").value="高级员工";                               //员工类别
+    document.getElementById("useremail").value="alice@example.com";                        //员工邮箱
+    document.getElementById("useraddress").value="广东省汕头市潮阳区";                     //员工住址
+    document.getElementById("userphone").value="1234567";                           //员工电话
+    document.getElementById("userjob").value="部长";                                    //员工职位
+    document.getElementById("userdepart").value="管理部门";                              //员工部门
+    document.getElementById("userex").value="员工平日工作认真，工作能力优秀，曾获年度优秀员工奖项";   //员工备注
+</script>
+
+<script type="text/javascript">  //弹窗关闭按钮功能实现
+    document.getElementById('zhezhao').style.display="none";
+    function dianwo(){
+        document.getElementById('zhezhao').style.display = "";
+
+    }
+    function hidder(){
+        document.getElementById('zhezhao').style.display="none";
+    }
+</script>
+
+</body>
+</html>

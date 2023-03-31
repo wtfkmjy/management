@@ -1,0 +1,329 @@
+body{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+html, body { height: 100%;margin: 0;padding: 0; }
+#left1{
+    width: 4%;
+    text-align: center;
+    background-color: rgb(98, 129, 250);
+    
+}
+
+#left1 .head{
+    width: 80%;
+    background-color:rgb(62, 129, 244);
+    height: auto;
+    margin-top: 1vh;
+}
+
+#left1 .h_img{
+      border-radius: 50%;
+      width: 3vw;
+      height: 6vh;
+      overflow: hidden;
+      margin-top: 1vh;
+}
+
+#left1 .name{
+   font-size: 4px;
+   margin-top: 1px;
+   font-family: 'Montserrat', sans-serif;
+   color: white;
+}
+
+#left1 .setting{
+    display: block;
+    margin-top: 6px;
+   
+}
+
+#left1 .allicon{
+    margin-top: 4vh;
+     text-align: center;
+     display: block;
+}
+#left1 .icon{
+    width: 50%;
+    display:inline-block;
+    display: block;
+    margin-left: 18%;
+    padding: 3px;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+#left1 .left_icon{
+    width: 80%;
+    opacity: 0.5;
+    margin-top: 0;
+    padding: 0;
+    font-size: 10px;
+    background-color:rgb(62, 129, 244);
+}
+#left1 .txt{
+  width: 80%;
+  opacity: 0.5;
+  margin-top: 0;
+  padding: 0;
+  font-size: 10px;
+}
+#left1 .active_txt{
+  font-size: 10px;
+    font-weight: bold;
+    width: 80%;
+    opacity: 1;
+    margin-top: 0;
+    padding: 0;
+}
+#left1 .active{
+   width: 80%;
+    opacity: 1;
+    margin-top: 0;
+    padding: 0;
+    background-color:rgb(62, 129, 244);
+}
+/*右侧*/
+.right{
+display: flex;
+height: 100%;
+}
+
+#left2{
+    width: 11.5%;
+    border-right: solid;
+    border: 1px solid #ccc;
+}
+#left2 .search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    width: 87.8%;
+    height:4%;
+    overflow: hidden;
+    margin-left: 6.1%;
+    margin-top: 20px;
+  }
+  #left2 .search-box img{
+      width: 1vw;
+  } 
+
+  #left2 .search-button {
+    background-color: transparent;
+    border: none;
+    margin-right: 1px;
+  }
+  
+  #left2 .search-input {
+    border: none;
+    flex: 1;
+    outline: none; /* 去掉搜索框聚焦时的默认边框 */
+    font-size: 8px;
+  }
+
+  .list{
+    margin-top: 20px;
+    width: 100%;
+  }
+ .list img{
+    width: 1vw;
+    padding-right: 1vw;
+ }
+  .list_span{
+    height:10%;
+    padding-top: 4px;
+    padding-left: 10%;
+    padding-bottom: 4px;
+    font-size: small;
+    font-family: "微软雅黑", Arial, sans-serif;
+    font-weight: lighter;
+    opacity: 0.8;
+    display: flex;
+    margin-bottom: 2vh;
+    background-color: rgb(249, 249, 249);
+  }
+
+  /* 最右侧 */
+#right2{
+    flex:1;
+}
+
+#right2 .top{
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 6%;
+  align-items: center;
+}
+
+.top_button {
+    background-color: rgb(22,132,252);
+    border: none;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin-left: 0%;
+}
+
+.dropdown {
+    display: flex;
+    width:10%;
+    height:75%;
+   padding-left: 15%;
+    display: inline-block;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.top_button img{
+  width: 1vw;
+  margin-left: auto;
+}
+
+.top_button span{
+  margin-left: 30%;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: small;
+}
+
+.top .search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  width:29%;
+  height: 75%;
+  border-radius: 5px;
+}
+.top .search-box img{
+    width: 1vw;
+} 
+
+.top .search-button {
+  border: none;
+  margin-right: 1px;
+  background-color: white;
+}
+
+.top .search-input {
+  border: none;
+  flex: 1;
+  outline: none; /* 去掉搜索框聚焦时的默认边框 */
+  font-size: 8px;
+}
+
+.top .other{
+  font-size: 10px;
+  margin-left: 1%;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0.5;
+}
+
+.top .icon{
+  margin-left: 10%;
+  padding-left:  5%;
+  padding-right: 0;
+  width: 20%;
+  height: 55%;
+  display: flex;
+  text-align: center;
+}
+
+.top .icon img{
+  margin-left: 5%;
+  padding: 0;
+  margin-right: auto;
+}
+
+
+.page_button{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  list-style: none;
+  padding-left: 10px;
+}
+
+.page_button .normal{
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+  font-weight: lighter;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.page_button .active{
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 10px;
+  font-weight: lighter;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: rgb(22,132,252);
+  height: 25px;
+  padding-top: 5px;
+}
+
+.used_data{
+
+}
+
+.alldata .data_button{
+  width: 95%;
+  padding-left: 2%;
+  display: flex;
+  background-color: rgb(239, 239, 239);
+  margin-left: 1.5%;
+  margin-right: 2.5%;
+  box-sizing: border-box;
+}
+
+.data_button span{
+  display: flex;
+  padding: 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: rgb(255, 255, 255);
+  margin-right: 2%;
+  text-align: center;
+  margin-left: 2%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.data_button span img{
+  width: 1rem;
+  height: 1rem;
+  margin-top: 2px;
+  margin-right: 0.5rem;
+}

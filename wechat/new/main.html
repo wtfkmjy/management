@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>纯鹿人</title>
+    <!-- 引入Vue.js -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Lato|Roboto|Poppins&display=swap">
+    <link href="TCindex.css" type="text/css" rel="stylesheet" />
+    <script src="./routes.js"></script>
+</head>
+
+<body style="overflow: hidden;z-index:50;">
+    <div id="left1">
+        <span class="head">
+            <img mode="withFix" class="h_img" src="./imge/yizi.jfif">
+        </span>
+        <span class="name">twq</span>
+        <span class="setting">
+            <img mode="withFix" style="width: 30%;" src="./imge/setting.png">
+        </span>
+        <div class="allicon">
+            <div class="icon">
+                <img class="left_icon" src="./imge/work.png">
+                <text class="txt">办公</text>
+            </div>
+            <div class="icon">
+                <img class="left_icon" src="./imge/usual.png">
+                <text class="txt">常用</text>
+            </div>
+            <div class="icon">
+                <img class="active" src="./imge/more2.png">
+                <text class="active_txt">客户</text>
+            </div>
+            <div class="icon">
+                <img class="left_icon" src="./imge/more.png">
+                <text class="txt">更多</text>
+            </div>
+            <div class="icon" style="margin-top: 550%">
+                <img class="left_icon" src="./imge/exit.png">
+            </div>
+        </div>
+    </div>
+    <div class="rightAll" style="flex:1;z-index:10;">
+        <div class="right">
+            <div id="left2">
+                <div class="search-box">
+                    <button type="submit" class="search-button"><img mode="withFix" src="./imge/search.png"></button>
+                    <input type="text" class="search-input" name="q" placeholder="输入搜索词">
+                </div>
+                <div class="list">
+                    <span class="list_span">
+                        <img mode="withFix" src="./imge/customer.png">
+                        <a>全部客户</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="./imge/down-circle.png">
+                        <a>客户类型</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="./imge/down-circle.png">
+                        <a>客户状态</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="./imge/follow.png">
+                        <a>联系更进</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="./imge/chat.png">
+                        <a>群聊汇总</a>
+                    </span>
+                </div>
+            </div>
+            <div id="right2">
+                <div class="top">
+                    <div class="dropdown">
+                        <button class="top_button"><span style="font-size:17px">不限</span><img mode="withFix" src="./imge/down.png"></button>
+                        <div class="dropdown-content">
+                            <a>不限</a>
+                            <a>名称</a>
+                            <a>手机号</a>
+                            <a>邮箱</a>
+                            <a>客户状态</a>
+                            <a>城市</a>
+                        </div>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" class="search-input" name="q" style="font-size:15px" placeholder="输入客户">
+                        <button type="submit" class="search-button"><img mode="withFix" src="./imge/search.png"></button>
+                    </div>
+                    <span class="other">更多搜索</span>
+                    <span class="other">撞客查询</span>
+                    <div class="icon">
+                        <img mode="withFix" src="./imge/increase2.png">
+                        <img mode="withFix" src="./imge/more3.png">
+                        <img mode="withFix" src="./imge/reminder.png">
+                        <img mode="withFix" src="./imge/message.png">
+                        <img mode="withFix" src="./imge/phone.png">
+                    </div>
+                </div>
+                <div class="middle">
+                    <ul class="page_button">
+                        <li class="normal">全部</li>
+                        <li class="active">今日新增</li>
+                        <li class="normal">从未联系</li>
+                        <li class="normal">今日跟进过</li>
+                        <li class="normal">近7天联系过</li>
+                        <li class="normal">7天未联系过</li>
+                    </ul>
+                    <div class="alldata">
+                        <div class="used_data">
+                            <div class="data_button">
+                                <span><img src="./imge/search2.png">搜索</span>
+                                <span type="button" onclick="dianwo()"><img src="./imge/increase.png">新建</span>
+                                <span><img src="./imge/download.png">导入<img style="margin-left: 2rem;" src="./imge/upload.png">导出</span>
+                                <div class="dropdown" style="margin-left: 30%;">
+                                    <span>排序<img style="margin-left: 1rem;" src="./imge/down.png"></span>
+                                    <div class="dropdown-content">
+                                        <a>客户ID</a>
+                                        <a>客户获取时间</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <iframe src="table.html" frameborder="0" width="98%" height="700px" style="margin-top: 5px;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--弹窗设置-->
+        <!--覆盖层-->
+        <div class="zhezhao" id='zhezhao' style=" z-index:998;" >
+            <div class="tankuang" style=" z-index:999;">
+                
+                <div id="header">
+                    <!-- <span>我是弹窗</span>-->
+                    <!--顶部栏的标签-->
+                    <div class="top_block">
+                        <div class="KHinfor">添加新客户<span class="KHinfor_tip">标注有 * 号的字段为必填</span></div>
+                    </div>
+                    <div id="header-right" onclick="hidder()">x</div>
+
+                    <!--主要内容的标签-->
+                    <!--第一行-->
+                    <div class="KHinfor">客户信息</div>
+                    <div class="KHinfor_1">
+                        &nbsp;&nbsp;&nbsp;&nbsp;*电话
+                        <input type="text" id="customerPhone" value="1234567">
+                    </div>
+
+                    <!--第二行-->
+                    <div class="KHinfor_1">
+                        *客户名称
+                        <input type="text" id="customerName" value="Alice">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        *性别
+                        <input class="chk" type="radio" name="customerGender" id="nan" checked=checked style="box-shadow: none" /><label for="nan">男</label>
+                        <input class="chk" type="radio" name="customerGender" id="nv" style="box-shadow: none" /><label for="nv">女</label>
+                    </div>
+                    <!--第三行-->
+                    <div class="KHinfor_1">
+                        *客户邮箱
+                        <input type="text" id="customerEmail" value="alice@example.com">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        客户类别
+                        <input type="text" id="customerJob" value="普通客户">
+                    </div>
+                    <!--第四行-->
+                    <div class="KHinfor_1">
+                        *客户地址
+                        <input type="text" id="customerAddress" value="广东省深圳市南山区">
+                    </div>
+                    <!--第五行-->
+                    <div class="KHinfor_1">
+                        *获取时间
+                        <input type="text" id="customerJointime" value="2022/1/1">
+                    </div>
+                    <!--第六行-->
+                    <div class="KHinfor_1">&nbsp;&nbsp;*负责人 <input type="text" id="chargeStaff" value="杜总"></div>
+
+                    <div class="KHinfor_1">
+                        *客户备注 <textarea class="KHinfor_ex" cols="20" rows="7" style="vertical-align: top"
+                                        id="userex"> </textarea>
+                    </div>
+                    </br></br></br></br></br></br>
+
+                    <!--底部栏修改按钮-->
+                    <div class="bottom_block">
+                        <div class="KHinfor_renew_block">
+                            <!--            /*修改按钮跳转到修改页面*/-->
+                            <a href="#" class="KHinfor_renew" class="KHinfor_renew">确认</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    <script>
+        //接口赋值
+
+
+
+        //输入栏赋值
+        document.getElementById("customerGender").value = "男";                             //员工密码
+        document.getElementById("customerName").value = "Alice";                                 //员工姓名
+        document.getElementById("customerJob").value = "高级员工";                               //员工类别
+        document.getElementById("customerEmail").value = "alice@example.com";                        //员工邮箱
+        document.getElementById("customerAddress").value = "深圳";                     //员工住址
+        document.getElementById("customerPhone").value = "1234567";                           //员工电话
+        document.getElementById("customerJointime").value = "2022/1/1";                                    //员工职位
+        document.getElementById("chargeStaff").value = "杜总";                              //员工部门
+        document.getElementById("userex").value = "员工平日工作认真，工作能力优秀，曾获年度优秀员工奖项";   //员工备注
+    </script>
+
+    <script type="text/javascript">
+        //弹窗关闭按钮功能实现
+        document.getElementById('zhezhao').style.display = "none";
+        function dianwo() {
+            document.getElementById('zhezhao').style.display = "";
+        }
+        function hidder() {
+            document.getElementById('zhezhao').style.display = "none";
+        }
+    </script>
+</body>
+
+
+</html>
