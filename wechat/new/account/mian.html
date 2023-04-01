@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>纯鹿人</title>
+    <!-- 引入Vue.js -->
+    <link rel="stylesheet" href="mian.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Lato|Roboto|Poppins&display=swap">
+</head>
+
+<body style="overflow: hidden;z-index:50;">
+    <div id="left1">
+        <span class="head">
+            <img mode="withFix" class="h_img" src="../imge/yizi.jfif">
+        </span>
+        <span class="name">twq</span>
+        <span class="setting">
+            <img mode="withFix" style="width: 30%;" src="../imge/setting.png">
+        </span>
+        <div class="allicon">
+            <div class="icon">
+                <img class="left_icon" src="../imge/work.png">
+                <text class="txt">办公</text>
+            </div>
+            <div class="icon">
+                <img class="left_icon" src="../imge/usual.png">
+                <text class="txt">常用</text>
+            </div>
+            <div class="icon">
+                <img class="active" src="../imge/more2.png">
+                <text class="active_txt">客户</text>
+            </div>
+            <div class="icon">
+                <img class="active" src="../imge/more2.png">
+                <text class="txt">账号</text>
+            </div>
+            <div class="icon">
+                <img class="left_icon" src="../imge/more.png">
+                <text class="txt">更多</text>
+            </div>
+            <div class="icon" style="margin-top: 550%">
+                <img class="left_icon" src="../imge/exit.png">
+            </div>
+        </div>
+    </div>
+    <div class="rightAll" style="flex:1;z-index:10;">
+        <div class="right">
+            <div id="left2">
+                <div class="search-box">
+                    <button type="submit" class="search-button"><img mode="withFix" src="../imge/search.png"></button>
+                    <input type="text" class="search-input" name="q" placeholder="输入搜索词">
+                </div>
+                <div class="list">
+                    <span class="list_span_active">
+                        <img mode="withFix" src="../imge/workerlist.png">
+                        <a>员工列表</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="../imge/quanxian.png">
+                        <a>权限管理</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="../imge/delete.png">
+                        <a>回收站</a>
+                    </span>
+                    
+                </div>
+            </div>
+            <div id="right2">
+                <div class="top">
+                    <div class="dropdown">
+                        <button class="top_button"><span style="font-size:17px">不限</span><img mode="withFix" src="../imge/down.png"></button>
+                        <div class="dropdown-content">
+                            <a>不限</a>
+                            <a>名称</a>
+                            <a>手机号</a>
+                            <a>邮箱</a>
+                            <a>客户状态</a>
+                            <a>城市</a>
+                        </div>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" class="search-input" name="q" style="font-size:15px" placeholder="输入客户">
+                        <button type="submit" class="search-button"><img mode="withFix" src="../imge/search.png"></button>
+                    </div>
+                    <span class="other">更多搜索</span>
+                    <span class="other">撞客查询</span>
+                    <div class="icon">
+                        <img mode="withFix" src="../imge/increase2.png">
+                        <img mode="withFix" src="../imge/more3.png">
+                        <img mode="withFix" src="../imge/reminder.png">
+                        <img mode="withFix" src="../imge/message.png">
+                        <img mode="withFix" src="../imge/phone.png">
+                    </div>
+                </div>
+                <div class="middle">
+                    <ul class="page_button">
+                        <li class="normal">全部</li>
+                        <li class="active">正常状态</li>
+                        <li class="normal">限制登陆</li>
+                        <li class="normal">已离职</li>
+                        <li class="normal">今日登陆</li>
+                        <li class="normal">今日未登陆</li>
+                    </ul>
+                    <div class="alldata">
+                        <div class="used_data">
+                            <div class="data_button">
+                                <span><img src="../imge/search2.png">搜索</span>
+                                <span type="button" onclick="dianwo()"><img src="../imge/increase.png">新建</span>
+                                <span><img src="../imge/download.png">导入<img style="margin-left: 2rem;" src="../imge/upload.png">导出</span>
+                                <div class="dropdown" style="margin-left: 30%;">
+                                    <span>排序<img style="margin-left: 1rem;" src="../imge/down.png"></span>
+                                    <div class="dropdown-content">
+                                        <a>客户ID</a>
+                                        <a>客户获取时间</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <iframe src="./table.html" frameborder="0" width="98%" height="700px" style="margin-top: 5px;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</body>
+
+
+</html>

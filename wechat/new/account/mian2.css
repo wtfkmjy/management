@@ -1,0 +1,185 @@
+.alldata2{
+    height: 4rem;
+}
+
+.data_button2{
+   height: 3rem;
+   margin-top: 1%;
+}
+
+.data_button2 img{
+  height: 70%;
+}
+
+.data_button2 button{
+    background-color:rgb(45, 111, 224) ;
+    color:white;
+    height: 76%;
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+
+
+
+
+  .wrapper {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .carousel {
+    display: flex;
+    width: 150%;
+    transition: transform 0.5s;
+    min-height: 620px;
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    flex-shrink: 0;
+    width: 33%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+  }
+
+  .carousel-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  select{
+    border: 1px solid #ccc;
+    height: 2rem;
+    margin-right: 1rem;
+  }
+
+  .Ma{
+    display: flex;
+  }
+  .M1{
+    border: 1px solid #ccc;
+  }
+
+  .M1 span{
+    display: flex;
+    justify-content: space-between;
+    margin: 4px;
+  }
+  .M2{
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+.M2 span{
+    flex: 1; /* 让文本元素占据剩余的空间 */
+  text-align: center;
+  margin-top: 0.5rem;
+  
+}
+  .id{
+    color: blue;
+  }
+
+
+ .item_2{
+
+ }
+
+ .item_2 .item_2_1{
+   background-color: rgb(227, 235, 255);
+   width: 2rem;
+   padding: 0.5rem;
+ }
+
+ .item_2 .item_2_2{
+    margin:0.5rem;
+    
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .item_2_2 span{
+    padding: 0.5rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    
+ }
+
+ .item_2_2 span.selected {
+    background-color: gray;
+    color: white;
+  }
+
+.item_3{
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.item_3 .item_3_1{
+    width: 100%;
+    background-color: rgb(227, 235, 255);
+    color: rgb(0,94,255);
+    height: 3rem;
+    line-height: 2.5;
+    font-size: 20px;
+    padding-left: 1rem;
+}
+.item_3 .item_3_2{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item_3_2 span{
+    border: 1px solid rgb(0,94,255);
+    margin-right: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.item_3_2 span.selected{
+    border: 1px solid rgb(0,94,255);
+    margin-right: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    text-align: center;
+    color: blue;
+}
+
+.item_3 .item_3_2 img{
+    margin-left: 38%;
+    margin-bottom: 5%;
+}
+
