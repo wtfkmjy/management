@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <head>
+        <link href="TC_delete.css" type="text/css" rel="stylesheet"/>
+    </head>
+
+</head>
+<body>
+<!--弹窗进入按钮-->
+<button type="button" onclick="dianwo2()">点我</button>
+
+<!--弹窗设置-->
+<div class="zhezhao2" id='zhezhao2'>
+    <div class="tankuang">
+        <div id="header">
+            <!-- <span>我是弹窗</span>-->
+            <!--顶部栏的标签-->
+            <div class="top_block">
+<!--                <div class="KHinfor">添加新客户<span class="KHinfor_tip">标注有 * 号的字段为必填</span></div>-->
+            </div>
+            <div id="header-right" onclick="hidder2()">x</div>
+
+            <!--主要内容的标签-->
+            <h4 class="KHinfor_1" style="font-size: 20px">确认是否删除该账号</h4>
+            <h5 class="KHinfor_1"style="padding-left: 130px;">继续确认账号将会被注销<br>员工本人信息将会被删除，跟进记录将保存</h5>
+            </br></br>
+            <!--底部栏修改按钮-->
+            <div class="bottom_block">
+                <div class="KHinfor_renew_block" style="float: left;transform:translate(190px,5px);background-color: red;">
+                    <nobr>
+                        <!--            /*修改按钮跳转到修改页面*/-->
+                        <a href="#" class="KHinfor_renew" class="KHinfor_renew">确认</a>
+                    </nobr>
+                </div>
+                <div class="KHinfor_renew_block" style="float: right;transform:translate(-190px,5px);background-color: gray">
+                    <nobr>
+                        <!--            /*修改按钮跳转到修改页面*/-->
+                        <a href="#"  onclick="hidder2()" class="KHinfor_renew" class="KHinfor_renew">取消</a>
+                    </nobr>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script> //接口删除
+
+
+
+</script>
+
+<script type="text/javascript">  //弹窗关闭按钮功能实现
+document.getElementById('zhezhao2').style.display = "none";
+
+function dianwo2() {
+    document.getElementById('zhezhao2').style.display = "";
+}
+
+function hidder2() {
+    document.getElementById('zhezhao2').style.display = "none";
+}
+</script>
+</body>
+</html>
