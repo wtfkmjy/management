@@ -82,13 +82,22 @@
 }
   .Ma{
     display: flex;
-     margin-right: 8rem;
+     margin-right: 7rem;
      margin-top: 2rem;
   }
   .M1{
     border: 1px solid #ccc;
-  }
 
+  }
+#checkbox1{
+  -web-kit-appearance:none;
+  outline:0;
+  height: 1rem;
+  width: 1rem;
+  border: 1px solid #ccc;
+  margin-top: 1.5rem;
+
+}
   .M1 span{
     display: flex;
     justify-content: space-between;

@@ -90,12 +90,12 @@
                     <div class="alldata2" >
                         <div class="data_button2"  style="display: flex; align-items: center;background-color: rgb(239,239,239);">
                                     <input placeholder="输入员工ID或员工姓名" style="height: 70%;"  border: 1px solid #ccc;>
-                                    <div style="height: 50%;  border: 1px solid #ccc;height: 78%;align-items: center;display: flex;background-color: white;">
+                                    <div style="height: 50%;  border: 1px solid #ccc;height: 78%;align-items: center;display: flex;background-color: white;padding-right: 0.5rem;">
                                     <img mode="withFix" src="../imge/search.png">
                                     搜索
                                     </div>     
-                                    <button style="margin-left: auto;" onclick="prev()" disabled class="carousel-button prev">修改标签</button>
-                                    <button onclick="next()"  class="carousel-button next">保存</button>
+                                    <button style="margin-left: auto;" onclick="next()"  class="carousel-button next">修改标签</button>
+                                    <button  onclick="prev()" disabled class="carousel-button prev">保存</button>
                         </div>
                         <div class="wrapper">
                             <div class="carousel">
@@ -108,26 +108,26 @@
                                             </select>
 
                                             <select name="dropdown2" id="dropdown2">
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
+                                            <option value="option1">部门</option>
+                                            <option value="option2">全部</option>
+                                            <option value="option3">人事部</option>
+                                            <option value="option3">财务部</option>
                                             </select>
 
                                             <select name="dropdown3" id="dropdown3" style="margin-left: 50%;">
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
+                                            <option value="option1">全选</option>
+
                                             </select>
                                         </div>
                                         <div class="MMM">
                                             <div class="Ma">
                                                 <div class="M1">
                                                 <span><img src="../imge/ze-manager@1x.png"><span>wzy</span></span> 
-                                                <span><span class="id">id</span><span>wzy</span></span>   
+                                                <span><span class="id">id</span><span>101</span></span>   
                                                 </div>
                                                 <div class="M2">
                                                     <span>销售部</span> 
-                                                    <span>wzy</span>   
+                                                    <span>经理</span>   
                                                 </div>
                                                 <input type="checkbox" name="checkbox1" id="checkbox1">
                                                 
@@ -135,11 +135,11 @@
                                             <div class="Ma">
                                                 <div class="M1">
                                                 <span><img src="../imge/ze-manager@1x.png"><span>wzy</span></span> 
-                                                <span><span class="id">id</span><span>wzy</span></span>   
+                                                <span><span class="id">id</span><span>102</span></span>   
                                                 </div>
                                                 <div class="M2">
                                                     <span>销售部</span> 
-                                                    <span>wzy</span>   
+                                                    <span>员工</span>   
                                                 </div>
                                                 <input type="checkbox" name="checkbox1" id="checkbox1">
                                                 
@@ -147,11 +147,11 @@
                                             <div class="Ma">
                                                 <div class="M1">
                                                 <span><img src="../imge/ze-manager@1x.png"><span>wzy</span></span> 
-                                                <span><span class="id">id</span><span>wzy</span></span>   
+                                                <span><span class="id">id</span><span>103</span></span>   
                                                 </div>
                                                 <div class="M2">
-                                                    <span>销售部</span> 
-                                                    <span>wzy</span>   
+                                                    <span>人事部</span> 
+                                                    <span>主管</span>   
                                                 </div>
                                                 <input type="checkbox" name="checkbox1" id="checkbox1">
                                                 
@@ -163,45 +163,44 @@
                                         <div class="item_2_1">部门</div>
                                         <div class="item_2_2">
                                             <span >销售部</span>
-                                            <span >销售部</span>
-                                            <span >销售部</span>
-                                            <span >销售部</span>
-                                            <span >销售部</span>
-                                            <span >销售部</span>
+                                            <span >运营部</span>
+                                            <span >外务部</span>
+                                            <span >后勤部</span>
+                                            <span >法务部</span>
+                                            <span >财务部</span>
                                         </div>
                                     </div>
                                     <div class="item_2">
-                                        <div class="item_2_1">部门</div>
+                                        <div class="item_2_1">职位</div>
                                         <div class="item_2_2">
-                                            <span >销售部</span>
-                                            <span >销售部</span>
-                                            <span >销售部</span>
-                                            <span >销售部</span>
-                                            <span >销售部</span>
-                                            <span >销售部</span>
+                                            <span >员工</span>
+                                            <span >主管</span>
+                                            <span >经理</span>
+                                            <span >组长</span>
+                                            <span >部长</span>
                                         </div>
                                     </div>
-                                    
+
                                 </div>    
                                 <div class="carousel-item hidden" style="padding: 0;">
                                     <div class="item_3">
                                         <div class="item_3_1">客户管理</div>
                                         <div class="item_3_2">
-                                            <span ><img src="../imge/ze-manager@1x.png">获取用户信息</span>
+                                            <span ><img src="../imge/ze-manager@1x.png">获取客户信息</span>
                                         </div>
                                     </div>
                                     <div class="item_3">
-                                        <div class="item_3_1">客户管理</div>
+                                        <div class="item_3_1">员工管理</div>
                                         <div class="item_3_2">
-                                            <span ><img src="../imge/ze-manager@1x.png">获取用户信息</span>
-                                            <span ><img src="../imge/ze-manager@1x.png">获取用户信息</span>
+                                            <span ><img src="../imge/ze-manager@1x.png">获取员工信息</span>
+                                            <span ><img src="../imge/ze-manager@1x.png">获取添加与修改信息</span>
 
                                         </div>
                                     </div>
                                     <div class="item_3">
-                                        <div class="item_3_1">客户管理</div>
+                                        <div class="item_3_1">群聊管理</div>
                                         <div class="item_3_2">
-                                            <span ><img src="../imge/ze-manager@1x.png">获取用户信息</span>
+                                            <span ><img src="../imge/ze-manager@1x.png">获取群聊信息</span>
                                         </div>
                                     </div>
                                 </div>
