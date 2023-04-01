@@ -9,6 +9,7 @@ import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Service
@@ -29,6 +30,8 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
         if(customerMapper.selectCount(wrapper) > 0){
             return CommonResult.error(400,"邮箱重复");
         }
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        customer.setCustomerJointime(sdf.format(System.currentTimeMillis()));
         customerMapper.insert(customer);
         return CommonResult.success();
     }

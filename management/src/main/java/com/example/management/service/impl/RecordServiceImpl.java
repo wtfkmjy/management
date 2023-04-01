@@ -26,7 +26,6 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
     public CommonResult selectById(int customerId) {
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("personId",customerId);
-        wrapper.eq("isCustomer",1);
         List list = recordMapper.selectList(wrapper);
         return CommonResult.success(list);
     }

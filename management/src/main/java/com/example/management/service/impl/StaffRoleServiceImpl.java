@@ -11,6 +11,8 @@ import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.management.Query;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -33,22 +35,30 @@ public class StaffRoleServiceImpl extends ServiceImpl<StaffRoleMapper, StaffRole
     private RoleMapper roleMapper;
 
     @Override
-    public CommonResult setStaffRole(String staffName, String roleName) {
+    public CommonResult setStaffRole(int staffId, int roleId) {
         QueryWrapper wrapper1 = new QueryWrapper();
         QueryWrapper wrapper2 = new QueryWrapper();
-        wrapper1.eq("staffName",staffName);
-        wrapper2.eq("roleName",roleName);
+        wrapper1.eq("staffId",staffId);
+        wrapper2.eq("roleId",roleId);
         Staff staff = staffMapper.selectOne(wrapper1);
         Role role = roleMapper.selectOne(wrapper2);
         if(Objects.isNull(role) || Objects.isNull(staff)){
             return CommonResult.error(400,"用户或角色不存在");
         }
-        wrapper1.eq("roleName",roleName);
+        wrapper1.eq("roleId",roleId);
         Integer integer = staffRoleMapper.selectCount(wrapper1);
         if(integer > 0){
             return CommonResult.error(400,"该用户已有此角色类型");
         }
-        staffRoleMapper.insert(new StaffRole(staff.getStaffId(),staffName,role.getRoleId(),roleName));
+        staffRoleMapper.insert(new StaffRole(staffId,staff.getStaffName(),roleId,role.getRoleName()));
         return CommonResult.success();
+    }
+
+    @Override
+    public CommonResult selectStaffRole(int staffId) {
+        QueryWrapper wrapper = new QueryWrapper();
+        wrapper.eq("staffId",staffId);
+        List list = staffRoleMapper.selectList(wrapper);
+        return CommonResult.success(list);
     }
 }

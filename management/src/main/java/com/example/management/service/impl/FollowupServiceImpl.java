@@ -40,8 +40,8 @@ public class FollowupServiceImpl extends ServiceImpl<FollowupMapper, Followup> i
     public CommonResult addFollowup(Followup followup) {
         QueryWrapper wrapper1 = new QueryWrapper();
         QueryWrapper wrapper2 = new QueryWrapper();
-        wrapper1.eq("staffName",followup.getStaffName());
-        wrapper2.eq("customerName",followup.getCustomerName());
+        wrapper1.eq("staffQQ",followup.getStaffQQ());
+        wrapper2.eq("customerQQ",followup.getCustomerQQ());
         Staff staff = staffMapper.selectOne(wrapper1);
         Customer customer = customerMapper.selectOne(wrapper2);
         if(Objects.isNull(staff) || Objects.isNull(customer)){
@@ -49,6 +49,8 @@ public class FollowupServiceImpl extends ServiceImpl<FollowupMapper, Followup> i
         }
         followup.setStaffId(staff.getStaffId());
         followup.setCustomerId(customer.getCustomerId());
+        followup.setStaffName(staff.getStaffName());
+        followup.setCustomerName(customer.getCustomerName());
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         followup.setEntryTime(sdf.format(System.currentTimeMillis()));
         followupMapper.insert(followup);

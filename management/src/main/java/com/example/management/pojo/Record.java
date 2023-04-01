@@ -29,6 +29,4 @@ public class Record implements Serializable {
 
     private String content;
 
-    @TableField("isCustomer")
-    private Integer isCustomer;
 }

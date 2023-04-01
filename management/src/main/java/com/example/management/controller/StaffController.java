@@ -41,7 +41,7 @@ public class StaffController {
     }
 
     @PreAuthorize("hasAuthority('添加与修改员工')")
-    @PostMapping
+    @PostMapping("/update")
     public CommonResult updateStaff(Staff staff){
         return staffService.updateStaff(staff);
     }

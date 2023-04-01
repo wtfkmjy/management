@@ -48,6 +48,11 @@ public class StaffServiceImpl extends ServiceImpl<StaffMapper, Staff> implements
         if(staffMapper.selectCount(wrapper) > 0){
             return CommonResult.error(400,"账号已被注册");
         }
+        QueryWrapper wrapper1 = new QueryWrapper();
+        wrapper1.eq("staffQQ",staff.getStaffQQ());
+        if(staffMapper.selectCount(wrapper1) > 0){
+            return CommonResult.error(400,"此qq号已被使用");
+        }
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         staff.setStaffPassword(bCryptPasswordEncoder.encode(staff.getStaffPassword()));
         staffMapper.insert(staff);

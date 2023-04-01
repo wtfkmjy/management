@@ -31,11 +31,17 @@ public class Followup implements Serializable {
     @TableField("staffName")
     private String staffName;
 
+    @TableField("staffQQ")
+    private String staffQQ;
+
     @TableField("customerId")
     private Integer customerId;
 
     @TableField("customerName")
     private String customerName;
+
+    @TableField("customerQQ")
+    private String customerQQ;
 
     @TableField("entryTime")
     private String entryTime;
@@ -103,5 +109,21 @@ public class Followup implements Serializable {
 
     public void setResult(String result) {
         this.result = result;
+    }
+
+    public String getStaffQQ() {
+        return staffQQ;
+    }
+
+    public void setStaffQQ(String staffQQ) {
+        this.staffQQ = staffQQ;
+    }
+
+    public String getCustomerQQ() {
+        return customerQQ;
+    }
+
+    public void setCustomerQQ(String customerQQ) {
+        this.customerQQ = customerQQ;
     }
 }

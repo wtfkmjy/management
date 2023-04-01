@@ -26,8 +26,8 @@ public class RecordController {
 
     @PreAuthorize("hasAnyAuthority('查找聊天记录')")
     @PostMapping("/select/customer")
-    public CommonResult selectById(int customerId){
-        return recordService.selectById(customerId);
+    public CommonResult selectById(int personId){
+        return recordService.selectById(personId);
     }
 
     @PreAuthorize("hasAnyAuthority('查找聊天记录')")

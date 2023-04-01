@@ -14,5 +14,7 @@ import com.example.management.utils.CommonResult;
  */
 public interface RoleManuService extends IService<RoleManu> {
 
-    CommonResult setRoleManu(String roleName, String manuName);
+    CommonResult setRoleManu(int roleId, int manuId);
+
+    CommonResult selectRoleManu(String roleId);
 }
