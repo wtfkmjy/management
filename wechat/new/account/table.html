@@ -86,8 +86,8 @@
                     <th>客户电话</th>
                     <th>客户邮箱</th>
                     <th>客户地址</th>
-                    <th>客户获取时间</th>
-                    <th>负责人</th>
+                    <th>客户职位</th>
+                    <th>员工部门</th>
                     <th>操作</th>
                 </tr>
             </thead>
@@ -288,16 +288,16 @@
             el: "#app",
             data: {
                 tableData: [
-                    { customerId: 1, customerName: "Alice", customerEmail: "alice@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 2, customerName: "Bob", customerEmail: "bob@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 3, customerName: "Charlie", customerEmail: "charlie@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 4, customerName: "David", customerEmail: "david@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 5, customerName: "Emily", customerEmail: "emily@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 6, customerName: "Frank", customerEmail: "frank@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 7, customerName: "George", customerEmail: "george@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 8, customerName: "Helen", customerEmail: "helen@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 9, customerName: "Ivy", customerEmail: "ivy@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 10, customerName: "Jack", customerEmail: "jackdalskjfla", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" }],
+                    { customerId: 101, customerName: "Alice", customerEmail: "alice@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "经理", chargeStaff: "销售部" },
+                    { customerId: 102, customerName: "Bob", customerEmail: "bob@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "经理", chargeStaff: "销售部" },
+                    { customerId: 103, customerName: "Charlie", customerEmail: "charlie@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "经理", chargeStaff: "销售部" },
+                    { customerId: 104, customerName: "David", customerEmail: "david@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "经理", chargeStaff: "销售部" },
+                    { customerId: 105, customerName: "Emily", customerEmail: "emily@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "经理", chargeStaff: "销售部" },
+                    { customerId: 106, customerName: "Frank", customerEmail: "frank@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "经理", chargeStaff: "销售部" },
+                    { customerId: 107, customerName: "George", customerEmail: "george@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "经理", chargeStaff: "销售部" },
+                    { customerId: 108, customerName: "Helen", customerEmail: "helen@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "经理", chargeStaff: "销售部" },
+                    { customerId: 109, customerName: "Ivy", customerEmail: "ivy@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "经理", chargeStaff: "销售部" },
+                    { customerId: 110, customerName: "Jack", customerEmail: "jackdalskjfla", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "经理", chargeStaff: "销售部" }],
                 pageSize: 8, // 每页显示的数据条数
                 currentPage: 1 // 当前页码
             },
@@ -307,7 +307,7 @@
                     this.tableData = data; }) .catch(error => { console.error('Error retrieving data:', error); }); },
             computed: {
                 totalPages: function () {
-                    // 总页数
+                    //销售部页数
                     return Math.ceil(this.tableData.length / this.pageSize);
                 },
                 paginatedData: function () {
