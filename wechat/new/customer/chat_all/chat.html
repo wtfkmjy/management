@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>纯鹿人</title>
+    <!-- ����Vue.js -->
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Lato|Roboto|Poppins&display=swap">
+    <link href="TCindex.css" type="text/css" rel="stylesheet" />
+    <script src="../../routes.js"></script>
+</head>
+
+<body style="overflow: hidden;z-index:50;">
+    <div id="left1">
+        <span class="head">
+            <img mode="withFix" class="h_img" src="../../imge/yizi.jfif">
+        </span>
+        <span class="name">twq</span>
+        <span class="setting">
+            <img mode="withFix" style="width: 30%;" src="../../imge/setting.png">
+        </span>
+        <div class="allicon">
+            <div class="icon">
+                <img class="left_icon" src="../../imge/work.png">
+                <text class="txt">办公</text>
+            </div>
+            <div class="icon">
+                <img class="left_icon" src="../../imge/usual.png">
+                <text class="txt">常用</text>
+            </div>
+            <div class="icon">
+                <img class="active" src="../../imge/more2.png">
+                <text class="active_txt">客户</text>
+            </div>
+            <div class="icon" id="gotoaccount">
+                <img class="left_icon" src="../../imge/more2.png">
+                <text class="txt">账号</text>
+            </div>
+            <div class="icon">
+                <img class="left_icon" src="../../imge/more.png">
+                <text class="txt">更多</text>
+            </div>
+            <div class="icon" style="margin-top: 550%">
+                <img class="left_icon" src="../../imge/exit.png">
+            </div>
+        </div>
+    </div>
+    <div class="rightAll" style="flex:1;z-index:10;">
+        <div class="right">
+            <div id="left2">
+                <div class="search-box">
+                    <button type="submit" class="search-button"><img mode="withFix" src="../../imge/search.png"></button>
+                    <input type="text" class="search-input" name="q" placeholder="输入搜索词">
+                </div>
+                <div class="list">
+                    <span class="list_span">
+                        <img mode="withFix" src="../../imge/customer.png">
+                        <a href="../allcustomer/main.html">全部客户</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="../../imge/down-circle.png">
+                        <a>客户类型</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="../../imge/down-circle.png">
+                        <a>客户状态</a>
+                    </span>
+                    <span class="list_span_active">
+                        <img mode="withFix" src="../../imge/follow.png">
+                        <a href="../allcustomer/follow.html">联系更进</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="../../imge/chat.png">
+                        <a href="../allcustomer/chat.html">群聊汇总</a>
+                    </span>
+                </div>
+            </div>
+            <div id="right2">
+                <div class="top">
+                    <div class="icon">
+                        <img mode="withFix" src="../../imge/increase2.png">
+                        <img mode="withFix" src="../../imge/more3.png">
+                        <img mode="withFix" src="../../imge/reminder.png">
+                        <img mode="withFix" src="../../imge/message.png">
+                        <img mode="withFix" src="../../imge/phone.png">
+                    </div>
+                </div>
+                <div style="display:flex; width:100%">
+                    <div class="chat_data">
+                        <div class="text_title">
+                            <img class="chat_img" mode="withFix" src="../../imge/down.png">
+                            <span>销售发展一群（1）</span>
+                        </div>
+                        <div class=" allchat" style="display:flex;">
+                            <div style="display: flex; width: 63.5%; overflow-y: auto; ">
+                                <div id="chat_detail" style="margin-left: 5%; margin-right: 10%; width: 55%; height: 80%; "></div>
+
+                                <div class="chat_menu">
+                                    <div class="dropdown" style="margin-top:15px;">
+                                        <button class="menu_bottom" style="display:flex;"><span style="font-size:17px">筛选群成员</span><img class="chat_img" src="../../imge/down.png"></button>
+                                        <div class="dropdown-content">
+                                                <a>意向客户</a>
+                                                <a>发展中客户</a>
+                                                <a>客户</a>
+                                                <a>全部</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown" style="margin-top:30px;">
+                                        <button class="menu_bottom" style="display:flex;"><span style="font-size:17px">信息分类</span><img class="chat_img" src="../../imge/down.png"></button>
+                                        <div class="dropdown-content">
+                                            <a>文字</a>
+                                                <a>链接</a>
+                                                <a>文件</a>
+                                                <a>交易</a>
+                                                <a>全部</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_comment">
+                                <div class="dropdown" style="margin-left:80%; margin-top:15px;">
+                                    <button class="menu_bottom" style="display: flex; border-radius: 50%; "><img class="chat_img" src="../../imge/increase2.png"></button>
+                                    <div class="dropdown-content">
+                                        <a>添加文字</a>
+                                            <a>添加图片</a>
+                                    </div>
+                                </div>
+                                <div class="chat_cdetail">
+                                    <a>  #客户今天心情看似不错，可以尝试向其介绍一下公司产品</ a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat_customer">
+                        <div class="chat_search">
+                            <input type="text" class="chat_input" name="q" placeholder="输入群成员">
+                            <button type="submit" class="chat_button"><img style="width:1vw;" src="../../imge/search.png">搜索</button>
+                        </div>
+                        <div class="chat_head" style="margin-top:5%;">
+                            <div id="chat_picture" style="display:flex"></div>
+                            <div>
+                                <div style="display:flex; margin-left:38%; margin-top:15px;">
+                                    <a> 查看更多</a>
+                                    <img style="width:1vw;" mode="withFix" src="../../imge/down.png">
+                                </div>
+                            </div>
+                            <div style="border-bottom: 2px solid #CCC; margin-left: 30px; margin-right:30px;margin-top:15px"></div>
+                        </div>
+                        <h3 style="margin-left:5%;">群简介</h3>
+                        <div class="chat_introduction">
+                            本群建立初衷是为方便销售人员与意向客户进行交流，为意向客户提供产品信息与建议。本群销售的产品主要面向年龄25-50岁的上班族
+                        </div>
+                        <h3 style="margin-left:5%;">查找聊天记录</h3>
+                        <div class="" chat_link" style="margin-left:5%;">
+                            <div class="chat_link1">
+                                <a class="chat_link2">群成员</a>
+                                <a class="chat_link2">日期&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="chat_link2">图片或视频</a>
+                            </div>
+                            <div class="chat_link1">
+                                <a class="chat_link2">文件&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="chat_link2">链接&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <a class="chat_link2">交易&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // �Զ����ַ���,����ƴ�ӱ�ǩ
+    var Str = "";
+
+    //�Զ�������
+    var Arr = [
+    { name: '文峰', time: '2023年2月25日16:00', text: '我是xxx,在XX实习期间，了解了XX工作“、”于XX单位实习，负责XXX' },
+        { name: '益轩', time: '2023年2月25日16:00', text: '你好，有什么问题可以随时向我们的工作人员提问哦' },
+        { name: '益轩', time: '2023年2月25日16:00', text: '请问您之前有体验或了解过我们公司的哪些产品吗？' },
+        { name: '文峰', time: '2023年2月25日16:00', text: '我之前了解过你们公司的xxx产品和yyy产品，觉得还是xxx产品更合适我们公司，yyy产品还是差强人意。' },
+        { name: '益轩', time: '2023年2月25日16:00', text: '请问您之前有体验或了解过我们公司的哪些产品吗？' },
+        { name: '益轩', time: '2023年2月25日16:00', text: '请问您之前有体验或了解过我们公司的哪些产品吗？' },
+        { name: '益轩', time: '2023年2月25日16:00', text: '好的' },
+    ];
+    Arr.forEach(e => {
+        Str += `<div class="chat1" style="display:flex; margin-top:30px;">
+                                        <div style="margin-left:1%;">
+                                            <img style="width:2vw;" mode="withFix" src="../../imge/mycustomer.png">
+                                        </div>
+                                        <div style="margin-left: 10px; width:100% ">
+                                            <div style="display:flex; width:93%">
+                                                <div class="chat_name">
+                                                    <a>${e.name}</a>
+                                                </div>
+                                                <div class="chat_time">
+                                                    <a>${e.time}</a>
+                                                </div>
+                                            </div>
+                                            <div class="chat_message" style="padding:5px;">
+                                                <a style="color:white; font-family: 'Montserrat', sans-serif;">${e.text}</a>
+                                            </div>
+                                        </div>
+                                    </div>`
+    })
+    console.log(Str)
+
+    // ƴ�����ַ����������innerHTML������Ⱦ��ҳ����
+    document.getElementById("chat_detail").innerHTML = Str;
+    var Str2 = "";
+    const gotoAccountButton = document.getElementById("gotoaccount");
+  gotoAccountButton.onclick = function() {
+    window.location.href = "../../account/mian.html"; 
+// 修改链接地址为你要跳转的页面地址
+  };
+    //�Զ�������
+    var Arr2 = [
+    { name1: '文峰', name2:'文权' },
+        { name1: '益轩', name2: '佳佳' },
+        { name1: '锴泓', name2: '小玉' },
+        { name1: '丸子', name2: '晓欢' },
+        { name1: '燕燕', name2: '嘉良' },
+    ];
+                Arr2.forEach(f => {
+                                Str2 += `<div>
+                                    <div style="margin-left:30px; ">
+                                        <img style="width:2vw;" mode="withFix" src="../../imge/mycustomer.png">
+                                            <span style="font-size:12px;">${f.name1}</span>
+                                    </div>
+
+                                    <div style=" margin-left:30px; margin-top:20px">
+                                        <img style="width:2vw;" mode="withFix" src="../../imge/mycustomer.png">
+                                        <span style="font-size:12px;">${f.name2}</span>
+                                    </div>
+                                    </div>`
+                                 })
+    console.log(Str2)
+
+    // ƴ�����ַ����������innerHTML������Ⱦ��ҳ����
+    document.getElementById("chat_picture").innerHTML = Str2;
+</script>
+</html>

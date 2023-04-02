@@ -68,7 +68,7 @@
             display: flex;
             width: 90%;
             margin-left: 10%;
-            list-style: none;=
+            list-style: none;
         }
         td{word-break: break-all; word-wrap:break-word;}
     </style>
@@ -91,7 +91,7 @@
             </thead>
             <tbody>
                 <tr v-for="(item, index) in paginatedData" :key="index">
-                    <td>{{ item.chatImg }}</td>
+                    <td v-on:click="gotoimg">{{ item.chatImg }}</td>
                     <td>{{ item.chatID }}</td>
                     <td>{{ item.chatName }}</td>
                     <td>{{ item.chatNum }}</td>
@@ -203,6 +203,9 @@
                     if (this.currentPage < this.totalPages) {
                         this.currentPage++;
                     }
+                },
+                gotoimg:function(){
+                   window.parent.location.href="../chat_all/chat.html";
                 }
             }
         });
