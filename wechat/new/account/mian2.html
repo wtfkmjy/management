@@ -27,13 +27,13 @@
                 <img class="left_icon" src="../imge/usual.png">
                 <text class="txt">常用</text>
             </div>
-            <div class="icon">
-                <img class="active" src="../imge/more2.png">
-                <text class="active_txt">客户</text>
+            <div class="icon" id="gotocustomer">
+                <img class="left_icon" src="../imge/more2.png">
+                <text class="txt">客户</text>
             </div>
-            <div class="icon">
+            <div class="icon" >
                 <img class="active" src="../imge/more2.png">
-                <text class="txt">账号</text>
+                <text class="active_txt">账号</text>
             </div>
             <div class="icon">
                 <img class="left_icon" src="../imge/more.png">
@@ -210,6 +210,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const gotoAccountButton = document.getElementById("gotocustomer");
+ gotoAccountButton.onclick = function() {
+   window.location.href = "../customer/allcustomer/main.html"; }
+   </script>
 
     <script>
 

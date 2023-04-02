@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Vue Table</title>
+    <!-- 引入 Vue 的 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="TCindex.css" rel="stylesheet" type="text/css"/>
+    <link href="main.html" rel="stylesheet"/>
+    <link href="TC_delete.css" rel="stylesheet" type="text/css"/>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .follow_man {
+            text-decoration: none;
+            font-family: Montserrat;
+            color: #333333;
+            padding-left: 30px;
+            line-height: 5px;
+        }
+
+        .follow_name {
+            text-decoration: none;
+            font-family: Montserrat;
+            padding-left: 5px;
+            color: #1684FC;
+        }
+
+        .time {
+            text-decoration: none;
+            font-family: Montserrat;
+            color: #BD3124;
+            padding-left: 5px;
+            font-size: 10px;
+        }
+
+        .follow_part {
+            background-color: #ffffff;
+            text-align: left;
+            vertical-align: middle;
+            display: inline-block;
+            position: absolute;
+
+        }
+
+        /*.infor_edit{*/
+        /*    border-radius: 4px;*/
+        /*    background: #ffffff;*/
+        /*    box-shadow:  -2px 2px 5px #e0e0e0,*/
+        /*    2px -2px 5px #ffffff;*/
+        /*}*/
+        .infor_btu {
+            position: relative;
+            right: -460%;
+            top: -50px;
+        }
+
+        .infor_edit {
+            border: 1px solid #000000;
+            background-color: #ffffff;
+            /*border-radius: 0.9em;//圆角*/
+            padding-top: 5px;
+            transition: all ease-in-out 0.2s;
+            font-size: 14px;
+            text-align: center;
+            vertical-align: middle;
+
+        }
+
+        .infor_edit:hover {
+            background-color: #F7F5F5;
+
+        }
+
+        .infor_img {
+            width: 20px;
+            vertical-align: middle;
+            padding-bottom: 5px;
+        }
+
+        .link {
+            position: relative;
+            width: 550%;
+            height: 1px;
+            left: 30px;
+            top: -45px;
+            border-top: solid #DBDBDB 1px;
+        }
+
+        .infor_follow {
+            border: 1px solid #DBDBDB;
+            position: relative;
+            transform: translate(19px, -25px);
+            padding-left: 8px;
+            padding-right: 8px;
+            width: 550%;
+            height: 60px;
+            /*text-: 30px;*/
+            resize: none;
+            text-decoration: none;
+            font-family: Montserrat;
+            text-color: #333333;
+            line-height: 20px;
+        }
+
+        .pagination {
+            position: absolute;
+            /*align-items: center;*/
+            bottom: 80px;
+            /*display: inline-block;*/
+            background-color: rgb(239, 239, 239);
+            height: 3rem;
+        }
+
+        .pagination li {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 5px;
+            background-color: rgb(255, 255, 255);
+            margin-right: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .pagination li.active {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .pagination li.disabled {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .table_bottom {
+            display: flex;
+            width: 90%;
+            margin-left: 10%;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app" style="overflow: hidden;  height: 100%; ">
+    <!--        联系跟进部分-->
+    <div class="follow_part">
+        <h5 class="follow_man">录入人:
+            <a class="follow_name" href="##">wjy</a>
+            <a class="time" href="##">7分钟前</a>
+        </h5>
+
+        <h5 class="follow_man">电话联系:
+            <a class="follow_name" href="##">hwq</a>
+        </h5>
+        <div class="infor_btu">
+            <button class="infor_edit" onclick="parent.dianwo4()"><img class="infor_img" src="../../imge/infor_all.png">&nbsp;详情</button>
+            <button class="infor_edit" onclick="parent.dianwo3()"><img class="infor_img" src="../../imge/infor_edit.png">&nbsp;修改</button>
+            <button class="infor_edit" onclick="parent.dianwo2()"><img class="infor_img" src="../../imge/infor_delete.png">&nbsp;删除</button>
+        </div>
+        <div class="link"></div>
+        <textarea class="infor_follow" disabled="disabled">很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好好很好
+            </textarea>
+
+        <h5 class="follow_man">录入人:
+            <a class="follow_name" href="##">hch</a>
+            <a class="time" href="##">一周前</a>
+        </h5>
+
+        <h5 class="follow_man">电话联系:
+            <a class="follow_name" href="##">wjy</a>
+        </h5>
+        <div class="infor_btu">
+            <button class="infor_edit" onclick="parent.dianwo4()"><img class="infor_img" src="../../imge/infor_all.png">&nbsp;详情</button>
+            <button class="infor_edit" onclick="parent.dianwo3()"><img class="infor_img" src="../../imge/infor_edit.png">&nbsp;修改</button>
+            <button class="infor_edit" onclick="parent.dianwo2()"><img class="infor_img" src="../../imge/infor_delete.png">&nbsp;删除</button>
+        </div>
+        <div class="link"></div>
+        <textarea class="infor_follow" disabled="disabled">非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣非常有趣
+            </textarea>
+
+        <h5 class="follow_man">录入人:
+            <a class="follow_name" href="##">hkb</a>
+            <a class="time" href="##">一个月前</a>
+        </h5>
+
+        <h5 class="follow_man">电话联系:
+            <a class="follow_name" href="##">wjy</a>
+        </h5>
+        <div class="infor_btu">
+            <button class="infor_edit" onclick="parent.dianwo4()"><img class="infor_img" src="../../imge/infor_all.png">&nbsp;详情</button>
+            <button class="infor_edit" onclick="parent.dianwo3()"><img class="infor_img" src="../../imge/infor_edit.png">&nbsp;修改</button>
+            <button class="infor_edit" onclick="parent.dianwo2()"><img class="infor_img" src="../../imge/infor_delete.png">&nbsp;删除</button>
+        </div>
+        <div class="link"></div>
+        <textarea class="infor_follow" disabled="disabled">感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般感觉一般
+            </textarea>
+    </div>
+
+
+    <ul class="pagination" style="text-align:center; width: 100%">
+        <li :class="{ disabled: currentPage === 1 }">
+            <a @click.prevent="goToPage(1)" href="#">首页</a>
+        </li>
+        <li :class="{ disabled: currentPage === totalPages }">
+            <a @click.prevent="goToPage(currentPage - 1)" href="#">上一页</a>
+        </li>
+        <li>
+            <span>第{{ currentPage }}/{{ totalPages }}页</span>
+        </li>
+        <li :class="{ disabled: currentPage === totalPages }">
+            <a @click.prevent="goToPage(currentPage + 1)" href="#">下一页</a>
+        </li>
+        <li :class="{ disabled: currentPage === totalPages }">
+            <a @click.prevent="goToPage(totalPages)" href="#">尾页</a>
+        </li>
+    </ul>
+</div>
+
+
+<script>
+    // 定义 Vue 实例
+    new Vue({
+        el: "#app",
+        data: {
+            tableData: [
+                {
+                    customerId: 1,
+                    customerName: "Alice",
+                    customerEmail: "alice@example.com",
+                    customerPhone: "1234567",
+                    customerGender: "男",
+                    customerAddress: "深圳",
+                    customerJointime: "1月1日",
+                    chargeStaff: "杜总"
+                },
+                {
+                    customerId: 2,
+                    customerName: "Bob",
+                    customerEmail: "bob@example.com",
+                    customerPhone: "1234567",
+                    customerGender: "男",
+                    customerAddress: "深圳",
+                    customerJointime: "1月1日",
+                    chargeStaff: "杜总"
+                },
+                {
+                    customerId: 3,
+                    customerName: "Charlie",
+                    customerEmail: "charlie@example.com",
+                    customerPhone: "1234567",
+                    customerGender: "男",
+                    customerAddress: "深圳",
+                    customerJointime: "1月1日",
+                    chargeStaff: "杜总"
+                },
+                {
+                    customerId: 4,
+                    customerName: "David",
+                    customerEmail: "david@example.com",
+                    customerPhone: "1234567",
+                    customerGender: "男",
+                    customerAddress: "深圳",
+                    customerJointime: "1月1日",
+                    chargeStaff: "杜总"
+                },
+                {
+                    customerId: 5,
+                    customerName: "Emily",
+                    customerEmail: "emily@example.com",
+                    customerPhone: "1234567",
+                    customerGender: "男",
+                    customerAddress: "深圳",
+                    customerJointime: "1月1日",
+                    chargeStaff: "杜总"
+                },
+                {
+                    customerId: 6,
+                    customerName: "Frank",
+                    customerEmail: "frank@example.com",
+                    customerPhone: "1234567",
+                    customerGender: "男",
+                    customerAddress: "深圳",
+                    customerJointime: "1月1日",
+                    chargeStaff: "杜总"
+                },
+                {
+                    customerId: 7,
+                    customerName: "George",
+                    customerEmail: "george@example.com",
+                    customerPhone: "1234567",
+                    customerGender: "男",
+                    customerAddress: "深圳",
+                    customerJointime: "1月1日",
+                    chargeStaff: "杜总"
+                },
+                {
+                    customerId: 8,
+                    customerName: "Helen",
+                    customerEmail: "helen@example.com",
+                    customerPhone: "1234567",
+                    customerGender: "男",
+                    customerAddress: "深圳",
+                    customerJointime: "1月1日",
+                    chargeStaff: "杜总"
+                },
+                {
+                    customerId: 9,
+                    customerName: "Ivy",
+                    customerEmail: "ivy@example.com",
+                    customerPhone: "1234567",
+                    customerGender: "男",
+                    customerAddress: "深圳",
+                    customerJointime: "1月1日",
+                    chargeStaff: "杜总"
+                },
+                {
+                    customerId: 10,
+                    customerName: "Jack",
+                    customerEmail: "jackdalskjfla",
+                    customerPhone: "1234567",
+                    customerGender: "男",
+                    customerAddress: "深圳",
+                    customerJointime: "1月1日",
+                    chargeStaff: "杜总"
+                }],
+            pageSize: 8, // 每页显示的数据条数
+            currentPage: 1 // 当前页码
+        },
+        created() { // make an AJAX request to retrieve the data
+            fetch('/api/data').then(response => response.json()).then(data => {
+                // set the tableData to the retrieved data
+                this.tableData = data;
+            }).catch(error => {
+                console.error('Error retrieving data:', error);
+            });
+        },
+        computed: {
+            totalPages: function () {
+                // 总页数
+                return Math.ceil(this.tableData.length / this.pageSize);
+            },
+            paginatedData: function () {
+                // 分页后的数据
+                var start = (this.currentPage - 1) * this.pageSize;
+                var end = start + this.pageSize;
+                var data = this.tableData.slice(start, end);
+
+                // 如果当前页显示的数据不足8条，则用空对象补齐
+                var fillCount = this.pageSize - data.length;
+                if (fillCount > 0) {
+                    var emptyData = Array.from({length: fillCount}, () => ({}));
+                    data = data.concat(emptyData);
+                }
+
+                return data;
+            },
+            pages: function () {
+                // 页码数组
+                var pages = [];
+                for (var i = 1; i <= this.totalPages; i++) {
+                    pages.push(i);
+                }
+                return pages;
+            }
+        },
+        methods: {
+            goToPage: function (page) {
+                // 跳转到指定页码
+                this.currentPage = page;
+            },
+            prevPage: function () {
+                // 上一页
+                if (this.currentPage > 1) {
+                    this.currentPage--;
+                }
+            },
+            nextPage: function () {
+                // 下一页
+                if (this.currentPage < this.totalPages) {
+                    this.currentPage++;
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
+
+<!-- 是的，你可以使用iframe元素将此页面嵌入到另一个HTML文件中。iframe元素允许您在一个页面中嵌入另一个页面，从而可以在一个单独的容器中显示表格和分页。以下是一个基本的示例，展示如何将此页面嵌入到另一个页面中：
+
+在您想要嵌入表格和分页的页面中，添加以下HTML代码：
+
+html
+Copy code
+<iframe src="table.html" frameborder="0" width="100%" height="500"></iframe>
+上述代码中，src属性指向包含您的表格和分页的HTML文件的URL，frameborder属性将边框设置为0以隐藏默认边框，width和height属性指定iframe的宽度和高度。
+
+请注意，使用iframe元素嵌入另一个页面可能会影响性能和安全性，因此请确保仅将其用于可信任的源和内容。 -->

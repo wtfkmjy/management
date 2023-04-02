@@ -2,7 +2,7 @@
 body{
     margin: 0px;
 }
-.zhezhao {
+.zhezhao,.zhezhao3 {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -11,20 +11,34 @@ body{
     height: 100%;
     z-index: 5;
 }
-.tankuang {
+.tankuang,.tankuang3 {
     position: relative;
     background: #fff;
     width: 50%;
-    height: 80%;
+    height: 55%;
     border-radius: 5px;
-    margin: 5% auto;
+    margin: 10% auto;
     background: #fff;
 }
+.list_span_active{
+    height:10%;
+    padding-top: 4px;
+    padding-left: 10%;
+    padding-bottom: 4px;
+    font-size: small;
+    font-family: "微软雅黑", Arial, sans-serif;
+    font-weight: lighter;
+    opacity: 0.8;
+    display: flex;
+    margin-bottom: 2vh;
+    background-color: rgb(227, 235, 255);
+    color: rgb(72, 129, 244);
+  }
 /*关闭按钮设置与互动*/
-#header{
+#header,#header3{
     height: 40px;
 }
-#header-right{
+#header-right,#header-right3{
     position: absolute;
     width: 25px;
     height: 25px;
@@ -35,7 +49,7 @@ body{
     top: 5px;
     text-align: center;
 }
-#header-right span {
+#header-right span,#header-right3 span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,11 +57,14 @@ body{
     font-weight: 600;
 }
 
-#header-right:hover {
+#header-right:hover{
+    background-color: #FC9494;
+}
+#header-right3:hover{
     background-color: #FC9494;
 }
 
-.tankuang{
+.tankuang,.tankuang3{
     vertical-align: top;
 }
 /*顶部栏设置*/

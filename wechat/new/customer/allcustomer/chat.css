@@ -146,20 +146,7 @@ height: 100%;
     margin-bottom: 2vh;
     background-color: rgb(249, 249, 249);
   }
-  .list_span_active{
-    height:10%;
-    padding-top: 4px;
-    padding-left: 10%;
-    padding-bottom: 4px;
-    font-size: small;
-    font-family: "微软雅黑", Arial, sans-serif;
-    font-weight: lighter;
-    opacity: 0.8;
-    display: flex;
-    margin-bottom: 2vh;
-    background-color: rgb(227, 235, 255);
-    color: rgb(72, 129, 244);
-  }
+
   /* 最右侧 */
 #right2{
     flex:1;
