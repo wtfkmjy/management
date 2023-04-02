@@ -68,8 +68,9 @@
             display: flex;
             width: 90%;
             margin-left: 10%;
-            list-style: none;
+            list-style: none;=
         }
+        td{word-break: break-all; word-wrap:break-word;}
     </style>
 </head>
 <body>
@@ -78,30 +79,28 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>客户ID</th>
-                    <th>客户名称</th>
-                    <th>客户性别</th>
-                    <th>客户电话</th>
-                    <th>客户邮箱</th>
-                    <th>客户地址</th>
-                    <th>客户获取时间</th>
-                    <th>负责人</th>
+                    <th></th>
+                    <th>群ID</th>
+                    <th>群名</th>
+                    <th>人数</th>
+                    <th>建群时间</th>
+                    <th>发展程度</th>
+                    <th>最近</th>
                     <th>操作</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="(item, index) in paginatedData" :key="index">
-                    <td>{{ item.customerId }}</td>
-                    <td>{{ item.customerName }}</td>
-                    <td>{{ item.customerGender }}</td>
-                    <td>{{ item.customerPhone }}</td>
-                    <td>{{ item.customerEmail }}</td>
-                    <td>{{ item.customerAddress }}</td>
-                    <td>{{ item.customerJointime }}</td>
-                    <td>{{ item.chargeStaff }}</td>
-                    <td v-if="item.customerName!=null" style="width:13%">
+                    <td>{{ item.chatImg }}</td>
+                    <td>{{ item.chatID }}</td>
+                    <td>{{ item.chatName }}</td>
+                    <td>{{ item.chatNum }}</td>
+                    <td>{{ item.setChatTime }}</td>
+                    <td>{{ item.chatChengdu }}</td>
+                    <td>{{ item.later }}</td>
+                    <td v-if="item.chatImg!=null" style="width:13%">
                         <div class="table_bottom">
-                            <button type="button" onclick="parent.dianwo()" style="background-color:white; border:none">
+                            <button type="button" onclick="parent.dianwo3()" style="background-color:white; border:none">
                                 <img style="width:50%; " src="../../imge/edit.png">
                             </button>
 
@@ -142,16 +141,16 @@
             el: "#app",
             data: {
                 tableData: [
-                    { customerId: 1, customerName: "Alice", customerEmail: "alice@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 2, customerName: "Bob", customerEmail: "bob@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 3, customerName: "Charlie", customerEmail: "charlie@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 4, customerName: "David", customerEmail: "david@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 5, customerName: "Emily", customerEmail: "emily@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 6, customerName: "Frank", customerEmail: "frank@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 7, customerName: "George", customerEmail: "george@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 8, customerName: "Helen", customerEmail: "helen@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 9, customerName: "Ivy", customerEmail: "ivy@example.com", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" },
-                    { customerId: 10, customerName: "Jack", customerEmail: "jackdalskjfla", customerPhone: "1234567", customerGender: "男", customerAddress: "深圳", customerJointime: "1月1日", chargeStaff: "杜总" }],
+                    { chatImg: 1,chatID:'3132524556',chatName:'销售发展1群',chatNum:'499',setChatTime:'2019-12-16',chatChengdu:'high',later:'文峰：你知道我是很喜欢这个项目的，...'},
+                    { chatImg: 2,chatID:'5524556688',chatName:'广州线下活动群',chatNum:'399',setChatTime:'2020-01-04',chatChengdu:'middle',later:'锴泓：我很期待参加这次活动，...'},
+                    { chatImg: 3,chatID:'1214522568',chatName:'珠海贸易群',chatNum:'482',setChatTime:'2020-03-16',chatChengdu:'high',later:'益轩：我想和贵公司聊聊这款产品，...'},
+                    { chatImg: 4,chatID:'4455789554',chatName:'销售发展2群',chatNum:'361',setChatTime:'2020-04-20',chatChengdu:'middle',later:'文权：可以再进一步了解一下吗?'},
+                    { chatImg: 5,chatID:'5898887888',chatName:'销售发展3群',chatNum:'201',setChatTime:'2021-05-25',chatChengdu:'middle',later:'君遥：我很满意，期待下次合作，...'},
+                    { chatImg: 6,chatID:'2335566898',chatName:'深圳书籍交易1群',chatNum:'612',setChatTime:'2021-10-14',chatChengdu:'high',later:'卓耀：下午需要谈下合作...'},
+                    { chatImg: 7,chatID:'1395484567',chatName:'产品研发部门群',chatNum:'50',setChatTime:'2021-12-01',chatChengdu:'low',later:'tip：收到汇款表单'},
+                    { chatImg: 8,chatID:'5601489664',chatName:'销售工作对接群',chatNum:'136',setChatTime:'2022-04-05',chatChengdu:'low',later:'泽涛：个人上会更喜欢贵公司上一款产品，...'},
+                    { chatImg: 9,chatID:'2587963541',chatName:'工期结算群',chatNum:'215',setChatTime:'2022-09-22',chatChengdu:'low',later:'俊坚：我其实都行啦，没什么不好的，...'},
+                    { chatImg: 10,chatID:'8625347231',chatName:'外贸讨论群',chatNum:'321',setChatTime:'2023-03-01',chatChengdu:'middle',later:'小明：我真的是受不了你一点啦，...'}],
                 pageSize: 8, // 每页显示的数据条数
                 currentPage: 1 // 当前页码
             },

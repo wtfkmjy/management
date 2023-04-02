@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>纯鹿人</title>
+    <title>群聊汇总</title>
     <!-- 引入Vue.js -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="chat.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Lato|Roboto|Poppins&display=swap">
-    <link href="TCindex.css" type="text/css" rel="stylesheet" />
+    <link href="chatTC.css" type="text/css" rel="stylesheet" />
     <link href="TC_delete.css" type="text/css" rel="stylesheet" />
     <script src="./routes.js"></script>
 </head>
@@ -29,12 +29,12 @@
                 <img class="left_icon" src="../../imge/usual.png">
                 <text class="txt">常用</text>
             </div>
-            <div class="icon">
+            <div class="icon" >
                 <img class="active" src="../../imge/more2.png">
                 <text class="active_txt">客户</text>
             </div>
-            <div class="icon" id="gotoaccount">
-                <img class="left_icon" src="../../imge/more2.png">
+            <div class="icon" id="gotaccount">
+                <img class="active" src="../../imge/more2.png">
                 <text class="txt">账号</text>
             </div>
             <div class="icon">
@@ -54,7 +54,7 @@
                     <input type="text" class="search-input" name="q" placeholder="输入搜索词">
                 </div>
                 <div class="list">
-                    <span class="list_span_active">
+                    <span class="list_span">
                         <img mode="withFix" src="../../imge/customer.png">
                         <a href="main.html">全部客户</a>
                     </span>
@@ -70,7 +70,7 @@
                         <img mode="withFix" src="../../imge/follow.png">
                         <a href="follow.html">联系更进</a>
                     </span>
-                    <span class="list_span">
+                    <span class="list_span_active">
                         <img mode="withFix" src="../../imge/chat.png">
                         <a href="chat.html">群聊汇总</a>
                     </span>
@@ -116,8 +116,8 @@
                         <div class="used_data">
                             <div class="data_button">
                                 <span><img src="../../imge/search2.png">搜索</span>
-                                <span type="button" onclick="dianwo()"><img src="../../imge/increase.png">新建</span>
-                                <span><img src="../../imge/download.png">导入<img style="margin-left: 2rem;" src="../../imge/upload.png">导出</span>
+                                <span type="button" onclick="dianwo()"><img src="../../imge/increase.png">新建群</span>
+<!--                                <span><img src="../../imge/download.png">导入<img style="margin-left: 2rem;" src="../../imge/upload.png">导出</span>-->
                                 <div class="dropdown" style="margin-left: 30%;">
                                     <span>排序<img style="margin-left: 1rem;" src="../../imge/down.png"></span>
                                     <div class="dropdown-content">
@@ -126,7 +126,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <iframe src="table.html" frameborder="0" width="98%" height="700px" style="margin-top: 5px;"></iframe>
+                            <iframe src="chat_table.html" frameborder="0" width="98%" height="700px" style="margin-top: 5px;"></iframe>
                         </div>
                     </div>
                 </div>
@@ -142,51 +142,43 @@
                     <!-- <span>我是弹窗</span>-->
                     <!--顶部栏的标签-->
                     <div class="top_block">
-                        <div class="KHinfor">添加新客户<span class="KHinfor_tip">标注有 * 号的字段为必填</span></div>
+                        <div class="KHinfor">新建群聊<span class="KHinfor_tip">标注有 * 号的字段为必填</span></div>
                     </div>
                     <div id="header-right" onclick="hidder()">x</div>
 
                     <!--主要内容的标签-->
                     <!--第一行-->
-                    <div class="KHinfor">客户信息</div>
+<!--                    <div class="KHinfor">客户信息</div>-->
                     <div class="KHinfor_1">
-                        &nbsp;&nbsp;&nbsp;&nbsp;*电话
-                        <input type="text" id="customerPhone" value="1234567">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*群ID
+                        <input type="text" id="chatIDNew" value="">
                     </div>
 
                     <!--第二行-->
                     <div class="KHinfor_1">
-                        *客户名称
-                        <input type="text" id="customerName" value="Alice">
+                        *群聊名称
+                        <input type="text" id="chatNameNew" value="">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        *性别
-                        <input class="chk" type="radio" name="customerGender" id="nan" checked=checked style="box-shadow: none" /><label for="nan">男</label>
-                        <input class="chk" type="radio" name="customerGender" id="nv" style="box-shadow: none" /><label for="nv">女</label>
+                        群人数
+                        <input type="text" id="chatNumNew" value="">
                     </div>
                     <!--第三行-->
                     <div class="KHinfor_1">
-                        *客户邮箱
-                        <input type="text" id="customerEmail" value="alice@example.com">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        客户类别
-                        <input type="text" id="customerJob" value="普通客户">
+                        *建群时间
+                        <input type="date" id="chatTimeNew" value="">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        *发展程度
+                        <select  id="chatChengduNew" onchange="selectcity()">
+                            <option>high</option>
+                            <option>middle</option>
+                            <option>low</option>
+                        </select>
                     </div>
-                    <!--第四行-->
-                    <div class="KHinfor_1">
-                        *客户地址
-                        <input type="text" id="customerAddress" value="广东省深圳市南山区">
-                    </div>
-                    <!--第五行-->
-                    <div class="KHinfor_1">
-                        *获取时间
-                        <input type="text" id="customerJointime" value="2022/1/1">
-                    </div>
-                    <!--第六行-->
-                    <div class="KHinfor_1">&nbsp;&nbsp;*负责人 <input type="text" id="chargeStaff" value="杜总"></div>
 
-                    <div class="KHinfor_1">
-                        *客户备注 <textarea class="KHinfor_ex" cols="20" rows="7" style="vertical-align: top"
-                                        id="userex"> </textarea>
+
+
+                    <div class="KHinfor_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;群简介&nbsp;<textarea class="KHinfor_ex" cols="20" rows="7" style="vertical-align: top"
+                                        id="chatIncludeNew"> </textarea>
                     </div>
                     </br></br></br>
 
@@ -194,7 +186,7 @@
                     <div class="bottom_block">
                         <div class="KHinfor_renew_block">
                             <!--            /*修改按钮跳转到修改页面*/-->
-                            <a href="main.html" class="KHinfor_renew" class="KHinfor_renew">确认</a>
+                            <a href="chat.html" class="KHinfor_renew" class="KHinfor_renew">确认</a>
                         </div>
                     </div>
 
@@ -215,15 +207,15 @@
                 <div id="header-right2" onclick="hidder2()">x</div>
 
                 <!--主要内容的标签-->
-                <h4 class="KHinfor_1" style="font-size: 20px">确认是否删除该账号</h4>
-                <h5 class="KHinfor_1"style="padding-left: 130px;">继续确认账号将会被注销<br>员工本人信息将会被删除，跟进记录将保存</h5>
+                <h4 class="KHinfor_1" style="font-size: 20px">确认是否删除该群与对应的聊天记录</h4>
+                <h5 class="KHinfor_1"style="padding-left: 130px;">删除后可通过新建群重新导入群聊信息和聊天记录</br>但所写备注和跟进将被永久删除</h5>
                 </br></br>
                 <!--底部栏修改按钮-->
                 <div class="bottom_block2">
                     <div class="KHinfor_renew_block2" style="float: left;transform:translate(190px,5px);background-color: red;">
                         <nobr>
                             <!--            /*修改按钮跳转到修改页面*/-->
-                            <a href="main.html" class="KHinfor_renew2" class="KHinfor_renew">确认</a>
+                            <a href="chat.html" class="KHinfor_renew2" class="KHinfor_renew">确认</a>
                         </nobr>
                     </div>
                     <div class="KHinfor_renew_block2" style="float: right;transform:translate(-190px,5px);background-color: gray">
@@ -237,11 +229,70 @@
             </div>
         </div>
     </div>
-    <script>
-         const gotoAccountButton = document.getElementById("gotoaccount");
+
+<!--修改编辑功能-->
+    <div class="zhezhao3" id='zhezhao3' style=" z-index:998;" >
+        <div class="tankuang3" style=" z-index:999;">
+
+            <div id="header3">
+                <!-- <span>我是弹窗</span>-->
+                <!--顶部栏的标签-->
+                <div class="top_block">
+                    <div class="KHinfor">新建群聊<span class="KHinfor_tip">标注有 * 号的字段为必填</span></div>
+                </div>
+                <div id="header-right3" onclick="hidder3()">x</div>
+
+                <!--主要内容的标签-->
+                <!--第一行-->
+                <!--                    <div class="KHinfor">客户信息</div>-->
+                <div class="KHinfor_1">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*群ID
+                    <input type="text" id="chatIDEdit" value="">
+                </div>
+
+                <!--第二行-->
+                <div class="KHinfor_1">
+                    *群聊名称
+                    <input type="text" id="chatNameEdit" value="">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    群人数
+                    <input type="text" id="chatNumEdit" value="">
+                </div>
+                <!--第三行-->
+                <div class="KHinfor_1">
+                    *建群时间
+                    <input type="date" id="chatTimeEdit" value="">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    *发展程度
+                    <select  id="chatChengduEdit" onchange="selectcity()">
+                        <option>high</option>
+                        <option>middle</option>
+                        <option>low</option>
+                    </select>
+                </div>
+
+                <div class="KHinfor_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;群简介&nbsp;<textarea class="KHinfor_ex" cols="20" rows="7" style="vertical-align: top"
+                                                                                           id="chatIncludeEdit"> </textarea>
+                </div>
+                </br></br></br>
+
+                <!--底部栏修改按钮-->
+                <div class="bottom_block">
+                    <div class="KHinfor_renew_block">
+                        <!--            /*修改按钮跳转到修改页面*/-->
+                        <a href="chat.html" class="KHinfor_renew" class="KHinfor_renew">确认</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  <script>
+    const gotoAccountButton = document.getElementById("gotoaccount");
   gotoAccountButton.onclick = function() {
     window.location.href = "../../account/mian.html"; }
     </script>
+    <!--    删除弹窗功能实现-->
     <script type="text/javascript">  //弹窗关闭按钮功能实现
     document.getElementById('zhezhao2').style.display = "none";
 
@@ -253,21 +304,17 @@
         document.getElementById('zhezhao2').style.display = "none";
     }
     </script>
+<!--    新建窗口的赋值-->
     <script>
         //接口赋值
-
-         
-
+        document.getElementById("chatIDEdit").value = "3132524556";
+        document.getElementById("chatNameEdit").value = "销售发展1群";
+        document.getElementById("chatNumEdit").value = "499";
+        document.getElementById("chatTimeEdit").value = "2019-12-16";
+        document.getElementById("chatChengduEdit").value = "high";
+        document.getElementById("chatIncludeEdit").value = "本群建立初衷是为方便销售人员与意向客户进行交流，为意向客户提供产品信息与建议。本群销售的产品主要面向年龄50-90岁的中老年人。";
         //输入栏赋值
-        document.getElementById("customerGender").value = "男";                             //员工密码
-        document.getElementById("customerName").value = "Alice";                                 //员工姓名
-        document.getElementById("customerJob").value = "高级员工";                               //员工类别
-        document.getElementById("customerEmail").value = "alice@example.com";                        //员工邮箱
-        document.getElementById("customerAddress").value = "深圳";                     //员工住址
-        document.getElementById("customerPhone").value = "1234567";                           //员工电话
-        document.getElementById("customerJointime").value = "2022/1/1";                                    //员工职位
-        document.getElementById("chargeStaff").value = "杜总";                              //员工部门
-        document.getElementById("userex").value = "员工平日工作认真，工作能力优秀，曾获年度优秀员工奖项";   //员工备注
+
     </script>
 
     <script type="text/javascript">
@@ -278,6 +325,16 @@
         }
         function hidder() {
             document.getElementById('zhezhao').style.display = "none";
+        }
+    </script>
+    <script type="text/javascript">
+        //弹窗关闭按钮功能实现
+        document.getElementById('zhezhao3').style.display = "none";
+        function dianwo3() {
+            document.getElementById('zhezhao3').style.display = "";
+        }
+        function hidder3() {
+            document.getElementById('zhezhao3').style.display = "none";
         }
     </script>
 </body>

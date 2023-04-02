@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>跟进联系</title>
+    <!-- 引入Vue.js -->
+<!--    <link rel="stylesheet" href="main.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Lato|Roboto|Poppins&display=swap">
+    <link href="follow.css" type="text/css" rel="stylesheet" />
+    <link href="TC_delete.css" type="text/css" rel="stylesheet" />
+    <script src="./routes.js"></script>
+</head>
+
+<body style="overflow: hidden;z-index:50;">
+    <div id="left1">
+        <span class="head">
+            <img mode="withFix" class="h_img" src="../../imge/yizi.jfif">
+        </span>
+        <span class="name">twq</span>
+        <span class="setting">
+            <img mode="withFix" style="width: 30%;" src="../../imge/setting.png">
+        </span>
+        <div class="allicon">
+            <div class="icon">
+                <img class="left_icon" src="../../imge/work.png">
+                <text class="txt">办公</text>
+            </div>
+            <div class="icon">
+                <img class="left_icon" src="../../imge/usual.png">
+                <text class="txt">常用</text>
+            </div>
+            <div class="icon">
+                <img class="active" src="../../imge/more2.png">
+                <text class="active_txt">客户</text>
+            </div>
+            <div class="icon" id="gotoaccount">
+                <img class="active" src="../../imge/more2.png">
+                <text class="txt">账号</text>
+            </div>
+            <div class="icon">
+                <img class="left_icon" src="../../imge/more.png">
+                <text class="txt">更多</text>
+            </div>
+            <div class="icon" style="margin-top: 550%">
+                <img class="left_icon" src="../../imge/exit.png">
+            </div>
+        </div>
+    </div>
+    <div class="rightAll" style="flex:1;z-index:10;">
+        <div class="right">
+            <div id="left2">
+                <div class="search-box">
+                    <button type="submit" class="search-button"><img mode="withFix" src="../../imge/search.png"></button>
+                    <input type="text" class="search-input" name="q" placeholder="输入搜索词">
+                </div>
+                <div class="list">
+                    <span class="list_span">
+                        <img mode="withFix" src="../../imge/customer.png">
+                        <a href="main.html">全部客户</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="../../imge/down-circle.png">
+                        <a>客户类型</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="../../imge/down-circle.png">
+                        <a>客户状态</a>
+                    </span>
+                    <span class="list_span_active">
+                        <img mode="withFix" src="../../imge/follow.png">
+                        <a href="follow.html">联系更进</a>
+                    </span>
+                    <span class="list_span">
+                        <img mode="withFix" src="../../imge/chat.png">
+                        <a href="chat.html">群聊汇总</a>
+                    </span>
+                </div>
+            </div>
+            <div id="right2">
+                <div class="top">
+                    <div class="dropdown">
+                        <button class="top_button"><span style="font-size:17px">不限</span><img mode="withFix" src="../../imge/down.png"></button>
+                        <div class="dropdown-content">
+                            <a>不限</a>
+                            <a>名称</a>
+                            <a>手机号</a>
+                            <a>邮箱</a>
+                            <a>客户状态</a>
+                            <a>城市</a>
+                        </div>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" class="search-input" name="q" style="font-size:15px" placeholder="   输入客户">
+                        <button type="submit" class="search-button"><img mode="withFix" src="../../imge/search.png"></button>
+                    </div>
+                    <span class="other">更多搜索</span>
+                    <span class="other">撞客查询</span>
+                    <div class="icon">
+                        <img mode="withFix" src="../../imge/increase2.png">
+                        <img mode="withFix" src="../../imge/more3.png">
+                        <img mode="withFix" src="../../imge/reminder.png">
+                        <img mode="withFix" src="../../imge/message.png">
+                        <img mode="withFix" src="../../imge/phone.png">
+                    </div>
+                </div>
+                <div class="middle">
+                    <ul class="page_button">
+                        <li class="normal">全部</li>
+                        <li class="active">今日</li>
+                        <li class="normal">昨天</li>
+                        <li class="normal">本周</li>
+                        <li class="normal">本月</li>
+                        <li class="normal">更早以前</li>
+                    </ul>
+                    <div class="alldata">
+                        <div class="used_data">
+                            <div class="data_button">
+                                <span><img src="../../imge/search2.png">搜索</span>
+                                <span type="button" onclick="dianwo()"><img src="../../imge/increase.png">写跟进</span>
+                                <span><img src="../../imge/download.png">导入<img style="margin-left: 2rem;" src="../../imge/upload.png">导出</span>
+                                <div class="dropdown" style="margin-left: 30%;">
+                                    <span>排序<img style="margin-left: 1rem;" src="../../imge/down.png"></span>
+                                    <div class="dropdown-content">
+                                        <a>客户ID</a>
+                                        <a>客户获取时间</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <iframe src="follow_table.html" frameborder="0" width="98%" height="700px" style="margin-top: 5px;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    新建跟进记录的弹窗-->
+    <!--弹窗设置-->
+        <!--覆盖层-->
+        <div class="zhezhao" id='zhezhao' style=" z-index:998;" >
+            <div class="tankuang" style=" z-index:999;">
+                
+                <div id="header">
+                    <!-- <span>我是弹窗</span>-->
+                    <!--顶部栏的标签-->
+                    <div class="top_block">
+                        <div class="KHinfor">写跟进<span class="KHinfor_tip">标注有 * 号的字段为必填</span></div>
+                    </div>
+                    <div id="header-right" onclick="hidder()">x</div>
+
+                    <!--主要内容的标签-->
+                    <!--第一行-->
+                    <div class="KHinfor">客户信息</div>
+                    <div class="KHinfor_1">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*客户&nbsp;
+                        <input type="text" id="CustomerName" placeholder="输入名称或拼音查找">
+                    </div>
+
+                    <!--第二行-->
+                    <div class="KHinfor_1">
+                        *跟进时间&nbsp;
+                        <input type="datetime-local" id="FollowTime" >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <!--第三行-->
+                    <div class="KHinfor_1">
+                        *跟进方式&nbsp;
+                        <select  id="FollowWay" onchange="selectcity()" >
+                            <option>电话号码</option>
+                            <option>微信</option>
+                            <option>QQ</option>
+                            <option>线下会面</option>
+                        </select>
+                    </div>
+                    <!--第四行-->
+                    <div class="KHinfor_1_img">
+                        图片&nbsp;
+                        <input type="file" id="image-file"  accept="image/gif, image/jpeg, image/png, image/jpg">
+                    </div>
+
+                    <div class="KHinfor_1">
+                        *跟进结果&nbsp; <textarea class="KHinfor_ex" cols="20" rows="7" style="vertical-align: top"
+                                        id="FollowResult"> </textarea>
+                    </div>
+
+                    <div class="KHinfor_1_file">
+                        &nbsp;附加文件&nbsp;
+                        <input type="file" id="file"   accept=".pdf,.docx,.txt,.ppt,.xlsx,.pptx">
+                    </div>
+
+                    </br></br></br></br>
+
+                    <!--底部栏修改按钮-->
+                    <div class="bottom_block">
+                        <div class="KHinfor_renew_block">
+                            <!--            /*修改按钮跳转到修改页面*/-->
+                            <a href="##" class="KHinfor_renew" class="KHinfor_renew">确认</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+<!--跟进记录的详情页面-->
+
+    <!--删除弹窗设置-->
+    <div class="zhezhao2" id='zhezhao2'style="z-index:998;">
+        <div class="tankuang2" style="z-index:998;">
+            <div id="header2">
+                <!-- <span>我是弹窗</span>-->
+                <!--顶部栏的标签-->
+                <div class="top_block2">
+                    <!--                <div class="KHinfor">添加新客户<span class="KHinfor_tip">标注有 * 号的字段为必填</span></div>-->
+                </div>
+                <div id="header-right2" onclick="hidder2()">x</div>
+
+                <!--主要内容的标签-->
+                <h4 class="KHinfor_1" style="font-size: 20px">确认是否删除该条跟进记录</h4>
+                <h5 class="KHinfor_1"style="padding-left: 130px;">删除后可在回收站中恢复</h5>
+                </br></br>
+                <!--底部栏修改按钮-->
+                <div class="bottom_block2">
+                    <div class="KHinfor_renew_block2" style="float: left;transform:translate(190px,5px);background-color: red;">
+                        <nobr>
+                            <!--            /*修改按钮跳转到修改页面*/-->
+                            <a href="follow.html" class="KHinfor_renew2" class="KHinfor_renew">确认</a>
+                        </nobr>
+                    </div>
+                    <div class="KHinfor_renew_block2" style="float: right;transform:translate(-190px,5px);background-color: gray">
+                        <nobr>
+                            <!--            /*修改按钮跳转到修改页面*/-->
+                            <a href="#"  onclick="hidder2()" class="KHinfor_renew2" style="color: white">取消</a>
+                        </nobr>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!--    修改跟进记录弹窗-->
+    <div class="zhezhao3" id='zhezhao3' style=" z-index:998;" >
+        <div class="tankuang3" style=" z-index:999;">
+
+            <div id="header3">
+                <!-- <span>我是弹窗</span>-->
+                <!--顶部栏的标签-->
+                <div class="top_block">
+                    <div class="KHinfor">修改跟进记录<span class="KHinfor_tip">标注有 * 号的字段为必填</span></div>
+                </div>
+                <div id="header-right3" onclick="hidder3()">x</div>
+
+                <!--主要内容的标签-->
+                <!--第一行-->
+                <div class="KHinfor">客户信息</div>
+                <div class="KHinfor_1">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*客户&nbsp;
+                    <input type="text" id="CustomerName3" placeholder="输入名称或拼音查找">
+                </div>
+
+                <!--第二行-->
+                <div class="KHinfor_1">
+                    *跟进时间&nbsp;
+                    <input type="datetime-local" id="FollowTime3" >
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                <!--第三行-->
+                <div class="KHinfor_1">
+                    *跟进方式&nbsp;
+                    <select  id="FollowWay3" onchange="selectcity()" >
+                        <option>电话号码</option>
+                        <option>微信</option>
+                        <option>QQ</option>
+                        <option>线下会面</option>
+                    </select>
+                </div>
+                <!--第四行-->
+                <div class="KHinfor_1_img">
+                    图片&nbsp;
+                    <input type="file" id="image-file3"  accept="image/gif, image/jpeg, image/png, image/jpg">
+                </div>
+
+                <div class="KHinfor_1">
+                    *跟进结果&nbsp; <textarea class="KHinfor_ex" cols="20" rows="7" style="vertical-align: top"
+                                              id="FollowResult3"> </textarea>
+                </div>
+
+                <div class="KHinfor_1_file">
+                    &nbsp;附加文件&nbsp;
+                    <input type="file" id="file3"   accept=".pdf,.docx,.txt,.ppt,.xlsx,.pptx">
+                </div>
+
+                </br></br></br></br>
+
+                <!--底部栏修改按钮-->
+                <div class="bottom_block">
+                    <div class="KHinfor_renew_block">
+                        <!--            /*修改按钮跳转到修改页面*/-->
+                        <a href="#" class="KHinfor_renew" class="KHinfor_renew">确认</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--    跟进记录详情页面弹窗-->
+    <div class="zhezhao4" id='zhezhao4' style=" z-index:998;" >
+        <div class="tankuang4" style=" z-index:999;">
+
+            <div id="header4">
+                <!-- <span>我是弹窗</span>-->
+                <!--顶部栏的标签-->
+                <div class="top_block">
+                    <div class="KHinfor">跟进详情<span class="KHinfor_tip">标注有 * 号的字段为必填</span></div>
+                </div>
+                <div id="header-right4" onclick="hidder4()">x</div>
+
+                <!--主要内容的标签-->
+                <!--第一行-->
+                <div class="KHinfor">客户信息</div>
+                <div class="KHinfor_1">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*客户&nbsp;
+                    <input type="text" id="CustomerName4" placeholder="输入名称或拼音查找" disabled="disabled">
+                </div>
+
+                <!--第二行-->
+                <div class="KHinfor_1">
+                    &nbsp;&nbsp;&nbsp;&nbsp;*跟进人&nbsp;
+                    <input type="text" id="FollowMan" placeholder="输入名称或拼音查找" disabled="disabled">
+                </div>
+
+                <div class="KHinfor_1">
+                    *跟进时间&nbsp;
+                    <input type="datetime-local" id="FollowTime4"  disabled="disabled">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                <!--第三行-->
+                <div class="KHinfor_1">
+                    *跟进方式&nbsp;
+                    <select  id="FollowWay4" onchange="selectcity()" disabled="disabled">
+                        <option>电话号码</option>
+                        <option>微信</option>
+                        <option>QQ</option>
+                        <option>线下会面</option>
+                    </select>
+                </div>
+                <!--第四行-->
+                <div class="KHinfor_1_img">
+                    图片&nbsp;
+                    <input type="file" id="image-file4"  accept="image/gif, image/jpeg, image/png, image/jpg">
+                </div>
+
+                <div class="KHinfor_1">
+                    *跟进结果&nbsp; <textarea class="KHinfor_ex" cols="20" rows="7" style="vertical-align: top"
+                                              id="FollowResult4" disabled="disabled"> </textarea>
+                </div>
+
+                <div class="KHinfor_1_file">
+                    &nbsp;附加文件&nbsp;
+                    <input type="file" id="file4"   accept=".pdf,.docx,.txt,.ppt,.xlsx,.pptx">
+                </div>
+
+                </br></br></br></br>
+
+                <!--底部栏修改按钮-->
+                <div class="bottom_block">
+                    <div class="KHinfor_renew_block">
+                        <!--            /*修改按钮跳转到修改页面*/-->
+                        <a href="##" class="KHinfor_renew" class="KHinfor_renew">确认</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!--    新建跟进记录的-->
+    <script>
+        //接口赋值
+
+
+
+        //输入栏赋值
+        document.getElementById("CustomerName").value = "";//客户姓名
+        document.getElementById("FollowTime").value = "";//跟进时间
+        document.getElementById("FollowWay").value = "";//跟进方式
+        document.getElementById("image-file").value = "";//上传图片
+        document.getElementById("file").value = "";      //上传文件
+        document.getElementById("FollowResult").value = "";//跟进结果
+    </script>
+
+    <script type="text/javascript">
+        //弹窗关闭按钮功能实现
+        document.getElementById('zhezhao').style.display = "none";
+        function dianwo() {
+            document.getElementById('zhezhao').style.display = "";
+        }
+        function hidder() {
+            document.getElementById('zhezhao').style.display = "none";
+        }
+    </script>
+
+<!--    修改跟进记录的-->
+    <script>
+        //接口赋值
+
+        const gotoAccountButton = document.getElementById("gotoaccount");
+  gotoAccountButton.onclick = function() {
+    window.location.href = "../../account/mian.html"; 
+// 修改链接地址为你要跳转的页面地址
+  };
+
+
+
+        //输入栏赋值
+        document.getElementById("CustomerName3").value = "twq";//客户姓名
+        document.getElementById("FollowTime3").value="";//跟进时间
+        document.getElementById("FollowWay3").value = "电话号码";//跟进方式
+        document.getElementById("image-file3").value = "";//上传图片
+        document.getElementById("file3").value = "";      //上传文件
+        document.getElementById("FollowResult3").value = "很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好";//跟进结果
+    </script>
+
+    <script type="text/javascript">
+        //弹窗关闭按钮功能实现
+        document.getElementById('zhezhao3').style.display = "none";
+        function dianwo3() {
+            document.getElementById('zhezhao3').style.display = "";
+        }
+        function hidder3() {
+            document.getElementById('zhezhao3').style.display = "none";
+        }
+    </script>
+<!--    删除跟进记录的-->
+    <script type="text/javascript">  //弹窗关闭按钮功能实现
+    document.getElementById('zhezhao2').style.display = "none";
+
+    function dianwo2() {
+        document.getElementById('zhezhao2').style.display = "";
+    }
+    function hidder2() {
+        document.getElementById('zhezhao2').style.display = "none";
+    }
+    </script>
+
+<!--    跟进记录详情页面的-->
+    <script>
+        //接口赋值
+
+
+
+        //输入栏赋值
+        document.getElementById("CustomerName4").value = "wjy";//客户姓名
+        document.getElementById("FollowMan").value = "twq";//客户姓名
+        document.getElementById("FollowTime4").value = "2023/03/22  19:31";//跟进时间
+        document.getElementById("FollowWay4").value = "电话号码";//跟进方式
+        document.getElementById("image-file4").value = "";//上传图片
+        document.getElementById("file4").value = "";      //上传文件
+        document.getElementById("FollowResult4").value = "很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好很好";//跟进结果
+    </script>
+
+    <script type="text/javascript">
+        //弹窗关闭按钮功能实现
+        document.getElementById('zhezhao4').style.display = "none";
+        function dianwo4() {
+            document.getElementById('zhezhao4').style.display = "";
+        }
+        function hidder4() {
+            document.getElementById('zhezhao4').style.display = "none";
+        }
+    </script>
+
+</body>
+
+
+</html>
