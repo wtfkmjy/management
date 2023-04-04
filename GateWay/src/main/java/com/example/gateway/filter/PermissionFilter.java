@@ -23,7 +23,7 @@ public class PermissionFilter implements GatewayFilter, Ordered {
     private RedisCache redisCache=new RedisCache();
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        //如果是第一次登录，则放行
+        //如果是第一次登录，则放行，下游的服务负责处理登录请求，并返回jwt。
         if(exchange.getRequest().getPath().value().equals("/user/login")){
             return chain.filter(exchange);
         }
