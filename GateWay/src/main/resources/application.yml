@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: gateway1
+          uri: http://localhost:9090
+          predicates:
+            - Path=/**
