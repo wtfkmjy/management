@@ -8,3 +8,5 @@ spring:
           uri: http://localhost:9090
           predicates:
             - Path=/**
+          filters:
+            - name: Permission
